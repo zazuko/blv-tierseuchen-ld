@@ -1,0 +1,24 @@
+{
+  "name": "blv-tierseuchen-ld",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && jest",
+    "start": "barnard59 run "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zazuko/blv-tierseuchen-ld.git"
+  },
+  "author": "Tomasz Pluskiewicz <tomasz@t-code.pl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zazuko/blv-tierseuchen-ld/issues"
+  },
+  "homepage": "https://github.com/zazuko/blv-tierseuchen-ld#readme",
+  "dependencies": {
+    "barnard59-main": "git+https://github.com/tpluscode/barnard59-main.git#npm-bin",
+    "rdf-parser-csvw": "git+https://github.com/rdf-ext/rdf-parser-csvw.git#develop"
+  }
+}
