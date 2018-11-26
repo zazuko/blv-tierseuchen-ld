@@ -1,0 +1,52 @@
+@base <urn:pipeline:tierseuchen-ld> .
+@prefix : <http://example.org/barnard59/> .
+@prefix code: <http://example.org/code/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<#Root> a :Pipeline ;
+  :steps [
+    :stepList ( <#download> <#readzip> <#processEntries> )
+  ] ;
+  :variables [
+    :variable
+      [ :name "source"; :value "http://ktk.netlabs.org/misc/rdf/seuchenmeldungen.zip" ],
+      [ :name "file"; :value "Stammdaten_tierseuchen.csv" ]
+  ].
+
+<#download> a :Step ;
+  :operation [
+    code:link <node:barnard59-base#fetch> ;
+    code:type code:ecmaScript
+  ] ;
+  :arguments (
+    "${source}"^^code:ecmaScriptTemplateLiteral
+  ).
+
+<#readzip> a :Step ;
+  :operation [
+    code:link <file:../lib/zip#unzip> ;
+    code:type code:ecmaScript
+  ].
+
+<#processEntries> a :Step ;
+  :operation [
+    code:link <file:../lib/zip#transform> ;
+    code:type code:ecmaScript
+  ] .
+
+# --------------------------------------
+#
+# Transform pipeline
+#
+# --------------------------------------
+
+<#Transform> a :ObjectPipeline ;
+  :steps [
+    :stepList ( <#print> )
+  ].
+
+<#print> a :Step ;
+  :operation [
+    code:link <node:barnard59-base#stdout> ;
+    code:type code:ecmaScript
+  ] .
