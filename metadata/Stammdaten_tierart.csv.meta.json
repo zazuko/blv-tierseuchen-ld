@@ -1,0 +1,47 @@
+{
+ "@context": "http://www.w3.org/ns/csvw",
+ "dialect": {
+  "delimiter": ";"
+ },
+ "tableSchema": {
+  "aboutUrl": "http://example.de/tierseuchen/tier-art/{id}",
+  "columns": [
+   {
+    "titles": "id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#id"
+   },
+   {
+    "titles": "name_de",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#name_de"
+   },
+   {
+    "titles": "name_fr",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#name_fr"
+   },
+   {
+    "titles": "name_it",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#name_it"
+   },
+   {
+    "titles": "name_en",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#name_en"
+   },
+   {
+    "titles": "equinella_tierart",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#equinella_tierart"
+   },
+   {
+    "titles": "oie_wild",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#oie_wild"
+   },
+   {
+    "titles": "oie_species",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#oie_species"
+   },
+   {
+    "titles": "oie_measureunit",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#oie_measureunit"
+   }
+  ]
+ }
+}

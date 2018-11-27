@@ -5,7 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "standard && jest",
-    "start": "barnard59 run --format text/turtle pipelines/blv-tierseuchen.ttl"
+    "pipeline": "barnard59 run --format text/turtle pipelines/blv-tierseuchen.ttl --pipeline urn:pipeline:tierseuchen-ld#Root",
+    "start:tierseuchen": "npm run pipeline -- --variable csv=Stammdaten_tierseuchen.csv",
+    "start:seuchenspez_typ": "npm run pipeline -- --variable csv=Stammdaten_seuchenspez_typ.csv",
+    "start:seuchenspezifikation": "npm run pipeline -- --variable csv=Stammdaten_seuchenspezifikation.csv",
+    "start:grund": "npm run pipeline -- --variable csv=Stammdaten_grund.csv",
+    "start:tierkategorie": "npm run pipeline -- --variable csv=Stammdaten_tierkategorie.csv",
+    "start:tierart": "npm run pipeline -- --variable csv=Stammdaten_tierart.csv"
   },
   "repository": {
     "type": "git",

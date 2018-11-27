@@ -1,0 +1,43 @@
+{
+ "@context": "http://www.w3.org/ns/csvw",
+ "dialect": {
+  "delimiter": ";"
+ },
+ "tableSchema": {
+  "aboutUrl": "http://example.de/tierseuchen/spez/{id}",
+  "columns": [
+   {
+    "titles": "id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#id"
+   },
+   {
+    "titles": "name_de",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#name_de"
+   },
+   {
+    "titles": "name_fr",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#name_fr"
+   },
+   {
+    "titles": "name_it",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#name_it"
+   },
+   {
+    "titles": "name_en",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#name_en"
+   },
+   {
+    "titles": "tierseuche_id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#tierseuche_id"
+   },
+   {
+    "titles": "seuchenspezifikation_typ_id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#seuchenspezifikation_typ_id"
+   },
+   {
+    "titles": "oie_serotype",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#oie_serotype"
+   }
+  ]
+ }
+}

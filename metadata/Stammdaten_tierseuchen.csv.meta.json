@@ -1,0 +1,135 @@
+{
+ "@context": "http://www.w3.org/ns/csvw",
+ "dialect": {
+  "delimiter": ";"
+ },
+ "tableSchema": {
+  "aboutUrl": "http://example.de/tierseuchen/tier-seuche/{id}",
+  "columns": [
+   {
+    "titles": "id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#id"
+   },
+   {
+    "titles": "name_de",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#name_de"
+   },
+   {
+    "titles": "name_fr",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#name_fr"
+   },
+   {
+    "titles": "name_it",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#name_it"
+   },
+   {
+    "titles": "name_en",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#name_en"
+   },
+   {
+    "titles": "name_oie",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#name_oie"
+   },
+   {
+    "titles": "kuerzel",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#kuerzel"
+   },
+   {
+    "titles": "code_intern",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#code_intern"
+   },
+   {
+    "titles": "code_oie",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#code_oie"
+   },
+   {
+    "titles": "seuchengruppe_id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#seuchengruppe_id"
+   },
+   {
+    "titles": "bemerkung_de",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#bemerkung_de"
+   },
+   {
+    "titles": "bemerkung_fr",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#bemerkung_fr"
+   },
+   {
+    "titles": "bemerkung_it",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#bemerkung_it"
+   },
+   {
+    "titles": "bemerkung_en",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#bemerkung_en"
+   },
+   {
+    "titles": "letztes_auftreten_de",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#letztes_auftreten_de"
+   },
+   {
+    "titles": "letztes_auftreten_fr",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#letztes_auftreten_fr"
+   },
+   {
+    "titles": "letztes_auftreten_it",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#letztes_auftreten_it"
+   },
+   {
+    "titles": "letztes_auftreten_en",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#letztes_auftreten_en"
+   },
+   {
+    "titles": "gelistet_oie",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#gelistet_oie"
+   },
+   {
+    "titles": "gelistet_wahis",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#gelistet_wahis"
+   },
+   {
+    "titles": "bulletin",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#bulletin"
+   },
+   {
+    "titles": "sort_jahresbericht",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#sort_jahresbericht"
+   },
+   {
+    "titles": "sort_tsv",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#sort_tsv"
+   },
+   {
+    "titles": "sort_wahis",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#sort_wahis"
+   },
+   {
+    "titles": "info_link_de",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#info_link_de"
+   },
+   {
+    "titles": "info_link_fr",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#info_link_fr"
+   },
+   {
+    "titles": "info_link_it",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#info_link_it"
+   },
+   {
+    "titles": "info_link_en",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#info_link_en"
+   },
+   {
+    "titles": "fallzahl_relativ",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#fallzahl_relativ"
+   },
+   {
+    "titles": "multiple_tierarten",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#multiple_tierarten"
+   },
+   {
+    "titles": "oie_id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#oie_id"
+   }
+  ]
+ }
+}

@@ -5,12 +5,11 @@
 
 <#Root> a :Pipeline ;
   :steps [
-    :stepList ( <#download> <#readzip> <#processEntries> )
+    :stepList ( <#download> <#readCsv> <#parse> <#serialize> <#save> )
   ] ;
   :variables [
     :variable
-      [ :name "source"; :value "http://ktk.netlabs.org/misc/rdf/seuchenmeldungen.zip" ],
-      [ :name "file"; :value "Stammdaten_tierseuchen.csv" ]
+      [ :name "source"; :value "http://ktk.netlabs.org/misc/rdf/seuchenmeldungen.zip" ]
   ].
 
 <#download> a :Step ;
@@ -22,31 +21,52 @@
     "${source}"^^code:ecmaScriptTemplateLiteral
   ).
 
-<#readzip> a :Step ;
+<#serialize> a :Step;
   :operation [
-    code:link <file:../lib/zip#unzip> ;
+    code:link <node:barnard59-formats#ntriples.serialize> ;
     code:type code:ecmaScript
   ].
 
-<#processEntries> a :Step ;
+<#save> a :Step;
   :operation [
-    code:link <file:../lib/zip#transform> ;
+    code:link <node:fs#createWriteStream>;
     code:type code:ecmaScript
-  ] .
+  ];
+  :arguments ("out/${csv}.nt"^^code:ecmaScriptTemplateLiteral).
 
-# --------------------------------------
-#
-# Transform pipeline
-#
-# --------------------------------------
+<#readCsv> a :Step ;
+  :operation [
+    code:link <file:../lib/zip#unzipOne> ;
+    code:type code:ecmaScript
+  ];
+  :arguments (
+    "${csv}"^^code:ecmaScriptTemplateLiteral
+  ).
 
-<#Transform> a :ObjectPipeline ;
+<#parse> a :Step;
+  :operation [
+    code:link <node:barnard59-formats#csvw.parse>;
+    code:type code:ecmaScript
+  ];
+  :arguments ([
+    code:link <#parseMetadata>;
+    code:type :ObjectPipeline
+  ]).
+
+<#parseMetadata> a :ObjectPipeline;
   :steps [
-    :stepList ( <#print> )
+    :stepList ( <#readMetadata> <#parseMetadataStep> )
   ].
 
-<#print> a :Step ;
+<#readMetadata> a :Step;
   :operation [
-    code:link <node:barnard59-base#stdout> ;
+    code:link <node:fs#createReadStream>;
     code:type code:ecmaScript
-  ] .
+  ];
+  :arguments ("metadata/${csv}.meta.json"^^code:ecmaScriptTemplateLiteral).
+
+<#parseMetadataStep> a :Step;
+  :operation [
+    code:link <node:barnard59-formats#jsonld.parse>;
+    code:type code:ecmaScript
+  ].

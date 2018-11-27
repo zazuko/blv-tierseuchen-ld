@@ -1,0 +1,35 @@
+{
+ "@context": "http://www.w3.org/ns/csvw",
+ "dialect": {
+  "delimiter": ";"
+ },
+ "tableSchema": {
+  "aboutUrl": "http://example.de/tierseuchen/grund/{id}",
+  "columns": [
+   {
+    "titles": "id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#id"
+   },
+   {
+    "titles": "code",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#code"
+   },
+   {
+    "titles": "name_de",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#name_de"
+   },
+   {
+    "titles": "name_fr",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#name_fr"
+   },
+   {
+    "titles": "name_it",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#name_it"
+   },
+   {
+    "titles": "name_en",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#name_en"
+   }
+  ]
+ }
+}
