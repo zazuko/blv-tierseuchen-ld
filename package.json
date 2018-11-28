@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/zazuko/blv-tierseuchen-ld#readme",
   "dependencies": {
+    "barnard59-core": "git+https://github.com/zazuko/barnard59-core.git",
     "barnard59-main": "git+https://github.com/tpluscode/barnard59-main.git#npm-bin",
     "node-stream-zip": "^1.7.0",
     "rdf-parser-csvw": "git+https://github.com/rdf-ext/rdf-parser-csvw.git#develop"

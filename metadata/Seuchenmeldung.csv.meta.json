@@ -1,0 +1,127 @@
+{
+ "@context": "http://www.w3.org/ns/csvw",
+ "dialect": {
+  "delimiter": ";"
+ },
+ "tableSchema": {
+  "aboutUrl": "http://example.de/tierseuchen/medlung/{id}",
+  "columns": [
+   {
+    "titles": "id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#id"
+   },
+   {
+    "titles": "isvet_fall_id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#isvet_fall_id"
+   },
+   {
+    "titles": "isvet_id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#isvet_id"
+   },
+   {
+    "titles": "diagnose_datum",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#diagnose_datum"
+   },
+   {
+    "titles": "diagnose_jahr",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#diagnose_jahr"
+   },
+   {
+    "titles": "diagnose_monat",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#diagnose_monat"
+   },
+   {
+    "titles": "diagnose_woche",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#diagnose_woche"
+   },
+   {
+    "titles": "meldung_datum",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#meldung_datum"
+   },
+   {
+    "titles": "betrieb_id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#betrieb_id"
+   },
+   {
+    "titles": "(No column name)",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#(No%20column%20name)"
+   },
+   {
+    "titles": "(No column name)",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#(No%20column%20name)"
+   },
+   {
+    "titles": "kanton_id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#kanton_id"
+   },
+   {
+    "titles": "bezirk_id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#bezirk_id"
+   },
+   {
+    "titles": "gemeinde_id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#gemeinde_id"
+   },
+   {
+    "titles": "tierart_id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#tierart_id"
+   },
+   {
+    "titles": "tierkategorie_id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#tierkategorie_id"
+   },
+   {
+    "titles": "tierseuche_id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#tierseuche_id"
+   },
+   {
+    "titles": "seuchenspezifikation_id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#seuchenspezifikation_id"
+   },
+   {
+    "titles": "grund_id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#grund_id"
+   },
+   {
+    "titles": "tiere_bestand",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#tiere_bestand"
+   },
+   {
+    "titles": "tiere_krank",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#tiere_krank"
+   },
+   {
+    "titles": "tiere_infiziert",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#tiere_infiziert"
+   },
+   {
+    "titles": "tiere_gestorben",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#tiere_gestorben"
+   },
+   {
+    "titles": "tiere_getoetet",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#tiere_getoetet"
+   },
+   {
+    "titles": "bse_geb_datum",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#bse_geb_datum"
+   },
+   {
+    "titles": "bse_grund_id",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#bse_grund_id"
+   },
+   {
+    "titles": "status",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#status"
+   },
+   {
+    "titles": "freigabe_internet",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#freigabe_internet"
+   },
+   {
+    "titles": "freigabe_intranet",
+    "propertyUrl": "http://example.de/tierseuchen/vocab#freigabe_intranet"
+   }
+  ]
+ }
+}
