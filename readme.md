@@ -1,20 +1,18 @@
 ## blv-tierseuche pipelines
 
-To process mapping run of the NPM scripts:
+To process inout file simply run:
 
-* start:grund
-* start:seuchenspez_typ
-* start:seuchenspezifikation
-* start:tierart
-* start:tierkategorie
-* start:tierseuchen
+```bash
+npm start
+```
 
-### Pipeline
+To fetch the zip archive from an alternative location add a source param
 
-The pipeline processes a single file from the archive. It gets downloaded
-every time which should be optimized. The file to extract and process is
-provided a input parameter to the pipeline and expects a matching mapping
-file to be present in the `metadata` folder.
+```bash
+npm start -- --variable source=http://ktk.netlabs.org/misc/rdf/seuchenmeldungen.zip
+```
+
+Note that the `--` are necessary with NPM
 
 ### CSVW mappings
 
