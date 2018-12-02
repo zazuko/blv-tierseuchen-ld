@@ -4,40 +4,47 @@
   "delimiter": ";"
  },
  "tableSchema": {
-  "aboutUrl": "http://example.de/tierseuchen/spez/{id}",
+  "aboutUrl": "https://blv.ld.admin.ch/animalpest/spez/{id}",
   "columns": [
    {
     "titles": "id",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#id"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#id"
    },
    {
     "titles": "name_de",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#name_de"
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "de-CH"
    },
    {
     "titles": "name_fr",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#name_fr"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#name_fr"
    },
    {
     "titles": "name_it",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#name_it"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#name_it"
    },
    {
     "titles": "name_en",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#name_en"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#name_en"
    },
    {
     "titles": "tierseuche_id",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#tierseuche_id"
+    "propertyUrl": "http://www.w3.org/2004/02/skos/core#notation"
    },
    {
     "titles": "seuchenspezifikation_typ_id",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#seuchenspezifikation_typ_id"
+    "propertyUrl": "http://www.w3.org/2004/02/skos/core#broader",
+    "valueUrl": "https://blv.ld.admin.ch/animalpest/spez-typ/{seuchenspezifikation_typ_id}"
    },
    {
     "titles": "oie_serotype",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#oie_serotype"
-   }
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#oie_serotype"
+   },
+   {
+    "virtual": true,
+    "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+    "valueUrl": "http://www.w3.org/2004/02/skos/core#Concept"
+  }
   ]
  }
 }

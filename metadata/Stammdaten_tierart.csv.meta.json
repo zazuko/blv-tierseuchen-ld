@@ -4,44 +4,50 @@
   "delimiter": ";"
  },
  "tableSchema": {
-  "aboutUrl": "http://example.de/tierseuchen/tier-art/{id}",
+  "aboutUrl": "https://blv.ld.admin.ch/animalpest/tier-art/{id}",
   "columns": [
    {
     "titles": "id",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#id"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#id"
    },
    {
     "titles": "name_de",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#name_de"
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "de-CH"
    },
    {
     "titles": "name_fr",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#name_fr"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#name_fr"
    },
    {
     "titles": "name_it",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#name_it"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#name_it"
    },
    {
     "titles": "name_en",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#name_en"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#name_en"
    },
    {
     "titles": "equinella_tierart",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#equinella_tierart"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#equinella_tierart"
    },
    {
     "titles": "oie_wild",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#oie_wild"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#oie_wild"
    },
    {
     "titles": "oie_species",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#oie_species"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#oie_species"
    },
    {
     "titles": "oie_measureunit",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#oie_measureunit"
-   }
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#oie_measureunit"
+   },
+   {
+    "virtual": true,
+    "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+    "valueUrl": "http://www.w3.org/2004/02/skos/core#Concept"
+  }
   ]
  }
 }

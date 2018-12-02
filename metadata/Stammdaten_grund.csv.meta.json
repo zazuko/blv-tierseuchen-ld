@@ -4,32 +4,38 @@
   "delimiter": ";"
  },
  "tableSchema": {
-  "aboutUrl": "http://example.de/tierseuchen/grund/{id}",
+  "aboutUrl": "https://blv.ld.admin.ch/animalpest/grund/{id}",
   "columns": [
    {
     "titles": "id",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#id"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#id"
    },
    {
     "titles": "code",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#code"
+    "propertyUrl": "http://www.w3.org/2004/02/skos/core#notation"
    },
    {
     "titles": "name_de",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#name_de"
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "de-CH"
    },
    {
     "titles": "name_fr",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#name_fr"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#name_fr"
    },
    {
     "titles": "name_it",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#name_it"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#name_it"
    },
    {
     "titles": "name_en",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#name_en"
-   }
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#name_en"
+   },
+   {
+    "virtual": true,
+    "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+    "valueUrl": "http://www.w3.org/2004/02/skos/core#Concept"
+  }
   ]
  }
 }
