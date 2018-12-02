@@ -4,132 +4,139 @@
   "delimiter": ";"
  },
  "tableSchema": {
-  "aboutUrl": "http://example.de/tierseuchen/tier-seuche/{id}",
+  "aboutUrl": "https://blv.ld.admin.ch/animalpest/tier-seuche/{id}",
   "columns": [
    {
     "titles": "id",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#id"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#id"
    },
    {
     "titles": "name_de",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#name_de"
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "de-CH"
    },
    {
     "titles": "name_fr",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#name_fr"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#name_fr"
    },
    {
     "titles": "name_it",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#name_it"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#name_it"
    },
    {
     "titles": "name_en",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#name_en"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#name_en"
    },
    {
     "titles": "name_oie",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#name_oie"
+    "propertyUrl": "http://www.w3.org/2004/02/skos/core#altLabel "
    },
    {
     "titles": "kuerzel",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#kuerzel"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#kuerzel"
    },
    {
     "titles": "code_intern",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#code_intern"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#code_intern"
    },
    {
     "titles": "code_oie",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#code_oie"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#code_oie"
    },
    {
     "titles": "seuchengruppe_id",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#seuchengruppe_id"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#seuchengruppe_id"
    },
    {
     "titles": "bemerkung_de",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#bemerkung_de"
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#comment",
+    "lang": "de-CH"
    },
    {
     "titles": "bemerkung_fr",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#bemerkung_fr"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#bemerkung_fr"
    },
    {
     "titles": "bemerkung_it",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#bemerkung_it"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#bemerkung_it"
    },
    {
     "titles": "bemerkung_en",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#bemerkung_en"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#bemerkung_en"
    },
    {
     "titles": "letztes_auftreten_de",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#letztes_auftreten_de"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#letztes_auftreten_de"
    },
    {
     "titles": "letztes_auftreten_fr",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#letztes_auftreten_fr"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#letztes_auftreten_fr"
    },
    {
     "titles": "letztes_auftreten_it",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#letztes_auftreten_it"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#letztes_auftreten_it"
    },
    {
     "titles": "letztes_auftreten_en",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#letztes_auftreten_en"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#letztes_auftreten_en"
    },
    {
     "titles": "gelistet_oie",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#gelistet_oie"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#gelistet_oie"
    },
    {
     "titles": "gelistet_wahis",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#gelistet_wahis"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#gelistet_wahis"
    },
    {
     "titles": "bulletin",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#bulletin"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#bulletin"
    },
    {
     "titles": "sort_jahresbericht",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#sort_jahresbericht"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#sort_jahresbericht"
    },
    {
     "titles": "sort_tsv",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#sort_tsv"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#sort_tsv"
    },
    {
     "titles": "sort_wahis",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#sort_wahis"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#sort_wahis"
    },
    {
     "titles": "info_link_de",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#info_link_de"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#info_link_de"
    },
    {
     "titles": "info_link_fr",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#info_link_fr"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#info_link_fr"
    },
    {
     "titles": "info_link_it",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#info_link_it"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#info_link_it"
    },
    {
     "titles": "info_link_en",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#info_link_en"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#info_link_en"
    },
    {
     "titles": "fallzahl_relativ",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#fallzahl_relativ"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#fallzahl_relativ"
    },
    {
     "titles": "multiple_tierarten",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#multiple_tierarten"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#multiple_tierarten"
    },
    {
     "titles": "oie_id",
-    "propertyUrl": "http://example.de/tierseuchen/vocab#oie_id"
-   }
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#oie_id"
+   },
+   {
+    "virtual": true,
+    "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+    "valueUrl": "http://www.w3.org/2004/02/skos/core#Concept"
+  }
   ]
  }
 }
