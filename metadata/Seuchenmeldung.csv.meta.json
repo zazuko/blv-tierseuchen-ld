@@ -4,7 +4,8 @@
   "delimiter": ";"
  },
  "tableSchema": {
-  "aboutUrl": "https://blv.ld.admin.ch/animalpest/medlung/{id}",
+  "aboutUrl": "https://blv.ld.admin.ch/animalpest/meldung/{id}",
+  "null": "NULL",
   "columns": [
    {
     "titles": "id",
