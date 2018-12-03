@@ -5,13 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "standard && jest",
-    "pipeline": "barnard59 run --format text/turtle pipelines/blv-tierseuchen.ttl --pipeline urn:pipeline:tierseuchen-ld#Root",
-    "start:tierseuchen": "npm run pipeline -- --variable csv=Stammdaten_tierseuchen.csv",
-    "start:seuchenspez_typ": "npm run pipeline -- --variable csv=Stammdaten_seuchenspez_typ.csv",
-    "start:seuchenspezifikation": "npm run pipeline -- --variable csv=Stammdaten_seuchenspezifikation.csv",
-    "start:grund": "npm run pipeline -- --variable csv=Stammdaten_grund.csv",
-    "start:tierkategorie": "npm run pipeline -- --variable csv=Stammdaten_tierkategorie.csv",
-    "start:tierart": "npm run pipeline -- --variable csv=Stammdaten_tierart.csv"
+    "start": "barnard59 run --format text/turtle pipelines/blv-tierseuchen.ttl --pipeline urn:pipeline:tierseuchen-ld#Root"
   },
   "repository": {
     "type": "git",
@@ -24,12 +18,13 @@
   },
   "homepage": "https://github.com/zazuko/blv-tierseuchen-ld#readme",
   "dependencies": {
+    "barnard59-core": "git+https://github.com/zazuko/barnard59-core.git",
     "barnard59-main": "git+https://github.com/tpluscode/barnard59-main.git#npm-bin",
     "node-stream-zip": "^1.7.0",
-    "rdf-parser-csvw": "git+https://github.com/rdf-ext/rdf-parser-csvw.git#develop"
+    "rdf-parser-csvw": "git+https://github.com/rdf-ext/rdf-parser-csvw.git#develop",
+    "unzipper": "^0.9.4"
   },
   "devDependencies": {
-    "standard": "^12.0.1",
-    "unzipper": "^0.9.4"
+    "standard": "^12.0.1"
   }
 }

@@ -5,7 +5,7 @@
 
 <#Root> a :Pipeline ;
   :steps [
-    :stepList ( <#download> <#readCsv> <#parse> <#serialize> <#save> )
+    :stepList ( <#download> <#unzip> <#transform> )
   ] ;
   :variables [
     :variable
@@ -34,14 +34,35 @@
   ];
   :arguments ("out/${csv}.nt"^^code:ecmaScriptTemplateLiteral).
 
-<#readCsv> a :Step ;
+<#unzip> a :Step ;
   :operation [
-    code:link <file:../lib/zip#unzipOne> ;
+    code:link <file:../lib/zip#unzip> ;
     code:type code:ecmaScript
-  ];
+  ] .
+
+<#transform> a :Step ;
+  :operation [
+    code:link <file:../lib/zip#transform> ;
+    code:type code:ecmaScript
+  ] ;
   :arguments (
-    "${csv}"^^code:ecmaScriptTemplateLiteral
+    [
+      code:link <#Transform> ;
+      code:type :ObjectPipeline
+    ]
+    "fileName => fileName != 'Stammdaten_kanton.csv' && fileName != 'Stammdaten_bezirk.csv' && fileName != 'Stammdaten_gemeinde.csv'"^^code:ecmaScript
   ).
+
+# ------------------------------
+#
+# Transformation pipeline
+#
+# ------------------------------
+
+<#Transform> a :Pipeline ;
+  :steps [
+    :stepList ( <#parse> <#serialize> <#save> )
+  ] .
 
 <#parse> a :Step;
   :operation [
