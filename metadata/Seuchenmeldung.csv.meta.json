@@ -129,7 +129,12 @@
    {
     "titles": "freigabe_intranet",
     "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/freigabe_intranet"
-   },      
+   },
+   {
+    "virtual":true,
+    "propertyUrl":"http://purl.org/linked-data/cube#dataSet",
+    "valueUrl":"https://blv.ld.admin.ch/animalpest/dataset"
+   },     
    {
      "virtual":true,
      "propertyUrl":"http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
