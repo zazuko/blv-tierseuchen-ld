@@ -15,7 +15,7 @@
 <#download> a :Step ;
   :operation [
     code:link <node:barnard59-base#fetch> ;
-    code:type code:ecmaScript
+    a code:ecmaScript
   ] ;
   :arguments (
     "${source}"^^code:ecmaScriptTemplateLiteral
@@ -24,32 +24,29 @@
 <#serialize> a :Step;
   :operation [
     code:link <node:barnard59-formats#ntriples.serialize> ;
-    code:type code:ecmaScript
+    a code:ecmaScript
   ].
 
 <#save> a :Step;
   :operation [
     code:link <node:fs#createWriteStream>;
-    code:type code:ecmaScript
+    a code:ecmaScript
   ];
   :arguments ("out/${csv}.nt"^^code:ecmaScriptTemplateLiteral).
 
 <#unzip> a :Step ;
   :operation [
     code:link <file:../lib/zip#unzip> ;
-    code:type code:ecmaScript
+    a code:ecmaScript
   ] .
 
 <#transform> a :Step ;
   :operation [
     code:link <file:../lib/zip#transform> ;
-    code:type code:ecmaScript
+    a code:ecmaScript
   ] ;
   :arguments (
-    [
-      code:link <#Transform> ;
-      code:type :ObjectPipeline
-    ]
+    <#Transform>
     "fileName => fileName != 'Stammdaten_kanton.csv' && fileName != 'Stammdaten_bezirk.csv' && fileName != 'Stammdaten_gemeinde.csv'"^^code:ecmaScript
   ).
 
@@ -67,12 +64,9 @@
 <#parse> a :Step;
   :operation [
     code:link <node:barnard59-formats#csvw.parse>;
-    code:type code:ecmaScript
+    a code:ecmaScript
   ];
-  :arguments ([
-    code:link <#parseMetadata>;
-    code:type :ObjectPipeline
-  ]).
+  :arguments ( <#parseMetadata> ).
 
 <#parseMetadata> a :ObjectPipeline;
   :steps [
@@ -82,12 +76,12 @@
 <#readMetadata> a :Step;
   :operation [
     code:link <node:fs#createReadStream>;
-    code:type code:ecmaScript
+    a code:ecmaScript
   ];
   :arguments ("metadata/${csv}.meta.json"^^code:ecmaScriptTemplateLiteral).
 
 <#parseMetadataStep> a :Step;
   :operation [
     code:link <node:barnard59-formats#jsonld.parse>;
-    code:type code:ecmaScript
+    a code:ecmaScript
   ].
