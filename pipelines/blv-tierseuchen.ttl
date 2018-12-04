@@ -9,7 +9,8 @@
   ] ;
   :variables [
     :variable
-      [ :name "source"; :value "http://ktk.netlabs.org/misc/rdf/seuchenmeldungen.zip" ]
+      [ :name "source"; :value "http://ktk.netlabs.org/misc/rdf/seuchenmeldungen.zip" ] ,
+      [ :name "target"; :value "target" ]
   ].
 
 <#download> a :Step ;
@@ -32,7 +33,7 @@
     code:link <node:fs#createWriteStream>;
     a code:ecmaScript
   ];
-  :arguments ("out/${csv}.nt"^^code:ecmaScriptTemplateLiteral).
+  :arguments ("${target}/${csv}.nt"^^code:ecmaScriptTemplateLiteral).
 
 <#unzip> a :Step ;
   :operation [
