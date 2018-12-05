@@ -3,53 +3,72 @@
 @prefix code: <http://example.org/code/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
-<#Root> a :Pipeline ;
-  :steps [
-    :stepList ( <#download> <#unzip> <#transform> )
-  ] ;
-  :variables [
-    :variable
-      [ :name "source"; :value "http://ktk.netlabs.org/misc/rdf/seuchenmeldungen.zip" ] ,
-      [ :name "target"; :value "target" ]
-  ].
+_:common-vars :variable
+  [ :name "targetDir"; :value "target" ] ,
+  [ :name "sourceDir"; :value "source" ] .
+
+# ------------------------------
+#
+# Download pipeline
+#
+# Downloads the zip and extracts contents to ${sourceDir}
+#
+# ------------------------------
+
+<#Download-Sources> a :Pipeline ;
+  :steps
+    [
+      :stepList ( <#download> <#extract> )
+    ] ;
+  :variables
+    [
+      :variable [ :name "sourceUrl"; :value "http://ktk.netlabs.org/misc/rdf/seuchenmeldungen.zip" ]
+    ],
+    _:common-vars .
 
 <#download> a :Step ;
-  :operation [
-    code:link <node:barnard59-base#fetch> ;
-    a code:ecmaScript
-  ] ;
+  :operation
+    [
+      code:link <node:barnard59-base#fetch> ;
+      a code:ecmaScript
+    ] ;
   :arguments (
-    "${source}"^^code:ecmaScriptTemplateLiteral
-  ).
+      "${sourceUrl}"^^code:ecmaScriptTemplateLiteral
+    ).
 
-<#serialize> a :Step;
-  :operation [
-    code:link <node:barnard59-formats#ntriples.serialize> ;
-    a code:ecmaScript
-  ].
-
-<#save> a :Step;
-  :operation [
-    code:link <node:fs#createWriteStream>;
-    a code:ecmaScript
-  ];
-  :arguments ("${target}/${csv}.nt"^^code:ecmaScriptTemplateLiteral).
-
-<#unzip> a :Step ;
-  :operation [
-    code:link <file:../lib/zip#unzip> ;
-    a code:ecmaScript
-  ] .
-
-<#transform> a :Step ;
-  :operation [
-    code:link <file:../lib/zip#transform> ;
-    a code:ecmaScript
-  ] ;
+<#extract> a :Step ;
+  :operation
+    [
+      code:link <file:../lib/zip#extract> ;
+      a code:ecmaScript
+    ] ;
   :arguments (
-    <#Transform>
-    "fileName => fileName != 'Stammdaten_kanton.csv' && fileName != 'Stammdaten_bezirk.csv' && fileName != 'Stammdaten_gemeinde.csv'"^^code:ecmaScript
-  ).
+      "${sourceDir}"^^code:ecmaScriptTemplateLiteral
+    ).
+
+# ------------------------------
+#
+# Transform pipeline
+#
+# One-by-one parses and transforms the source csv files to RDF
+#
+# ------------------------------
+
+<#TransformFiles> a :Pipeline ;
+  :steps [
+    :stepList (
+      [] a :Step ;
+        :operation
+        [
+          code:link <file:../lib/zip#transform> ;
+          a code:ecmaScript
+        ] ;
+        :arguments (
+          <#TransformCsv>
+          "fileName => fileName != 'Stammdaten_kanton.csv' && fileName != 'Stammdaten_bezirk.csv' && fileName != 'Stammdaten_gemeinde.csv'"^^code:ecmaScript
+        )
+      )
+  ]
 
 # ------------------------------
 #
@@ -57,32 +76,58 @@
 #
 # ------------------------------
 
-<#Transform> a :Pipeline ;
-  :steps [
-    :stepList ( <#parse> <#serialize> <#save> )
-  ] .
+<#TransformCsv> a :Pipeline ;
+  :steps
+    [
+      :stepList ( <#open> <#parse> <#serialize> <#save> )
+    ] .
+
+<#open> a :Step ;
+  :operation
+    [
+
+    ] .
 
 <#parse> a :Step;
-  :operation [
-    code:link <node:barnard59-formats#csvw.parse>;
-    a code:ecmaScript
-  ];
+  :operation
+    [
+      code:link <node:barnard59-formats#csvw.parse>;
+      a code:ecmaScript
+    ];
   :arguments ( <#parseMetadata> ).
 
 <#parseMetadata> a :ObjectPipeline;
-  :steps [
-    :stepList ( <#readMetadata> <#parseMetadataStep> )
-  ].
+  :steps
+    [
+      :stepList ( <#readMetadata> <#parseMetadataStep> )
+    ].
 
 <#readMetadata> a :Step;
-  :operation [
-    code:link <node:fs#createReadStream>;
-    a code:ecmaScript
-  ];
+  :operation
+    [
+      code:link <node:fs#createReadStream>;
+      a code:ecmaScript
+    ];
   :arguments ("metadata/${csv}.meta.json"^^code:ecmaScriptTemplateLiteral).
 
 <#parseMetadataStep> a :Step;
-  :operation [
-    code:link <node:barnard59-formats#jsonld.parse>;
-    a code:ecmaScript
-  ].
+  :operation
+    [
+      code:link <node:barnard59-formats#jsonld.parse>;
+      a code:ecmaScript
+    ].
+
+<#serialize> a :Step;
+  :operation
+    [
+      code:link <node:barnard59-formats#ntriples.serialize> ;
+      a code:ecmaScript
+    ].
+
+<#save> a :Step;
+  :operation
+    [
+      code:link <node:fs#createWriteStream>;
+      a code:ecmaScript
+    ];
+  :arguments ("${targetDir}/${csv}.nt"^^code:ecmaScriptTemplateLiteral).
