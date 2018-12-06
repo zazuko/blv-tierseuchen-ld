@@ -82,10 +82,13 @@ _:common-vars :variable
 
 <#doTransform> a :Step ;
   :operation [
-      code:link <file:../lib/run-pipeline> ;
+      code:link <node:barnard59-core#forEach> ;
       a code:ecmaScript
     ] ;
-  :arguments ( <#TransformCsv> ) .
+  :arguments (
+    <#TransformCsv>
+    "fileName => this.variables.set('csv', fileName)"^^code:ecmaScript
+  ) .
 
 # ------------------------------
 #
