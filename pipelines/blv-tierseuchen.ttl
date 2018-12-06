@@ -9,6 +9,22 @@ _:common-vars :variable
 
 # ------------------------------
 #
+# Root pipeline
+#
+# Entire workflow: download, extract and process files
+#
+# ------------------------------
+
+<#Root> a :Pipeline ;
+  :steps [
+    :stepList (
+      [ a :Step ;
+        :operation [ a code:ecmaScript; code:link <file:../lib/sequence> ];
+        :arguments ( <#Download-Sources> <#TransformFiles> ) ]
+    ) ] .
+
+# ------------------------------
+#
 # Download pipeline
 #
 # Downloads the zip and extracts contents to ${sourceDir}
