@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "standard && jest",
-    "start": "npm run pipeline -- urn:pipeline:tierseuchen-ld#Root",
-    "pipeline": "mkdir -p target source; barnard59 run --format text/turtle pipelines/blv-tierseuchen.ttl --pipeline"
+    "start": "mkdir -p target source; barnard59 run --format text/turtle pipelines/blv-tierseuchen.ttl",
+    "pipeline": "npm start -- --pipeline"
   },
   "repository": {
     "type": "git",
