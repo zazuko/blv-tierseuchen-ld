@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "standard && jest",
-    "start": "barnard59 run --format text/turtle pipelines/blv-tierseuchen.ttl --pipeline urn:pipeline:tierseuchen-ld#Root"
+    "start": "barnard59 run --format text/turtle pipelines/blv-tierseuchen.ttl --pipeline urn:pipeline:tierseuchen-ld#Root",
+    "clean-nt": "rm out/everything.nt && cat out/*.nt | sed '/_:/d' | sed '/<file/d' | sed '/#(No/d' | sed '/NULL/d'  > out/everything.nt"
   },
   "repository": {
     "type": "git",
