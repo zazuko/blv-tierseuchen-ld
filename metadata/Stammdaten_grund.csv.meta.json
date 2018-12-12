@@ -21,15 +21,18 @@
    },
    {
     "titles": "name_fr",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#name_fr"
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "fr-CH"
    },
    {
     "titles": "name_it",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#name_it"
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "it-CH"
    },
    {
     "titles": "name_en",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#name_en"
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "en"
    },
    {
     "virtual": true,

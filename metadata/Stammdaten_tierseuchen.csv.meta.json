@@ -17,15 +17,18 @@
    },
    {
     "titles": "name_fr",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#name_fr"
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "fr-CH"
    },
    {
     "titles": "name_it",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#name_it"
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "it-CH"
    },
    {
     "titles": "name_en",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#name_en"
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "en"
    },
    {
     "titles": "name_oie",
@@ -54,15 +57,18 @@
    },
    {
     "titles": "bemerkung_fr",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#bemerkung_fr"
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#comment",
+    "lang": "fr-CH"
    },
    {
     "titles": "bemerkung_it",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#bemerkung_it"
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#comment",
+    "lang": "it-CH"
    },
    {
     "titles": "bemerkung_en",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#bemerkung_en"
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#comment",
+    "lang": "en"
    },
    {
     "titles": "letztes_auftreten_de",
