@@ -40,7 +40,11 @@
    },
    {
     "titles": "meldung_datum",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/meldung_datum"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/meldung_datum",
+    "datatype": {
+      "base": "date",
+      "format": "dd.MM.yyyy"
+    }
    },
    {
     "titles": "betrieb_id",
