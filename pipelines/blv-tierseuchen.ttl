@@ -4,8 +4,8 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 _:common-vars :variable
-  [ :name "targetDir"; :value "target" ] ,
-  [ :name "sourceDir"; :value "source" ] .
+  [ a :Variable; :name "targetDir"; :value "target" ] ,
+  [ a :Variable; :name "sourceDir"; :value "source" ] .
 
 # ------------------------------
 #
@@ -38,7 +38,7 @@ _:common-vars :variable
     ] ;
   :variables
     [
-      :variable [ :name "sourceUrl"; :value "http://ktk.netlabs.org/misc/rdf/seuchenmeldungen.zip" ]
+      :variable [ a :Variable; :name "sourceUrl"; :value "http://ktk.netlabs.org/misc/rdf/seuchenmeldungen.zip" ]
     ],
     _:common-vars .
 
@@ -59,7 +59,7 @@ _:common-vars :variable
       a code:ecmaScript
     ] ;
   :arguments (
-    "${sourceDir}"^^code:ecmaScriptTemplateLiteral
+    "sourceDir"^^:VariableName
   ).
 
 # ------------------------------
@@ -93,7 +93,7 @@ _:common-vars :variable
       a code:ecmaScript
     ] ;
   :arguments (
-    "${sourceDir}"^^code:ecmaScriptTemplateLiteral
+    "sourceDir"^^:VariableName
    ) .
 
 <#doTransform> a :Step ;
