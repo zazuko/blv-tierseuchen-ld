@@ -5,19 +5,22 @@
  },
  "tableSchema": {
   "aboutUrl": "https://blv.ld.admin.ch/animalpest/meldung/{id}",
-  "null": "NULL",
   "columns": [
    {
     "titles": "id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/id"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/id",
+    "null": "NULL"
+
    },
    {
     "titles": "isvet_fall_id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/isvet_fall_id"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/isvet_fall_id",
+    "null": "NULL"
    },
    {
     "titles": "isvet_id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/isvet_id"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/isvet_id",
+    "null": "NULL"
    },
    {
     "titles": "diagnose_datum",
@@ -44,61 +47,73 @@
     "datatype": {
       "base": "date",
       "format": "dd.MM.yyyy"
-    }
+    },
+    "null": "NULL"
    },
    {
     "titles": "betrieb_id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/betrieb_id"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/betrieb_id",
+    "null": "NULL"
    },
    {
     "titles": "kanton_id",
     "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/kanton_id",
-    "valueUrl": "http://classifications.data.admin.ch/canton/{kanton_id}"
+    "valueUrl": "http://classifications.data.admin.ch/canton/{kanton_id}",
+    "null": "NULL"
    },
    {
     "titles": "bezirk_id",
     "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/bezirk_id",
-    "valueUrl": "http://classifications.data.admin.ch/district/{bezirk_id}"
+    "valueUrl": "http://classifications.data.admin.ch/district/{bezirk_id}",
+    "null": "NULL"
    },
    {
     "titles": "gemeinde_id",
     "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/gemeinde_id",
-    "valueUrl": "http://classifications.data.admin.ch/municipality/{gemeinde_id}"
+    "valueUrl": "http://classifications.data.admin.ch/municipality/{gemeinde_id}",
+    "null": "NULL"
    },
    {
     "titles": "tierart_id",
     "propertyUrl": "https://blv.ld.admin.ch/animalpest/dimension/tier-art",
-    "valueUrl": "https://blv.ld.admin.ch/animalpest/tier-art/{tierart_id}"
+    "valueUrl": "https://blv.ld.admin.ch/animalpest/tier-art/{tierart_id}",
+    "null": "NULL"
    },
    {
     "titles": "tierkategorie_id",
     "propertyUrl": "https://blv.ld.admin.ch/animalpest/dimension/tier-kategorie",
-    "valueUrl": "https://blv.ld.admin.ch/animalpest/tier-kategorie/{tierkategorie_id}"
+    "valueUrl": "https://blv.ld.admin.ch/animalpest/tier-kategorie/{tierkategorie_id}",
+    "null": "NULL"
    },
    {
     "titles": "tierseuche_id",
     "propertyUrl": "https://blv.ld.admin.ch/animalpest/dimension/tier-seuche",
-    "valueUrl": "https://blv.ld.admin.ch/animalpest/tier-seuche/{tierseuche_id}"
+    "valueUrl": "https://blv.ld.admin.ch/animalpest/tier-seuche/{tierseuche_id}",
+    "null": "NULL"
    },
    {
     "titles": "seuchenspezifikation_id",
     "propertyUrl": "https://blv.ld.admin.ch/animalpest/dimension/spez",
-    "valueUrl": "https://blv.ld.admin.ch/animalpest/spez/{seuchenspezifikation_id}"
+    "valueUrl": "https://blv.ld.admin.ch/animalpest/spez/{seuchenspezifikation_id}",
+    "null": "NULL"
    },
    {
     "titles": "grund_id",
     "propertyUrl": "https://blv.ld.admin.ch/animalpest/dimension/grund",
-    "valueUrl": "https://blv.ld.admin.ch/animalpest/grund/{grund_id}"
+    "valueUrl": "https://blv.ld.admin.ch/animalpest/grund/{grund_id}",
+    "null": "NULL"
    },
    {
     "titles": "tiere_bestand",
     "propertyUrl": "https://blv.ld.admin.ch/animalpest/measure/tiere_bestand",
-    "datatype":"number"
+    "datatype":"number",
+    "null": "NULL"
    },
    {
     "titles": "tiere_krank",
     "propertyUrl": "https://blv.ld.admin.ch/animalpest/measure/tiere_krank",
-    "datatype":"number"
+    "datatype":"number",
+    "null": "NULL"
    },
    {
     "titles": "tiere_infiziert",
@@ -117,23 +132,28 @@
    },
    {
     "titles": "bse_geb_datum",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/bse_geb_datum"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/bse_geb_datum",
+    "null": "NULL"
    },
    {
     "titles": "bse_grund_id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/bse_grund_id"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/bse_grund_id",
+    "null": "NULL"
    },
    {
     "titles": "status",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/status"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/status",
+    "null": "NULL"
    },
    {
     "titles": "freigabe_internet",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/freigabe_internet"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/freigabe_internet",
+    "null": "NULL"
    },
    {
     "titles": "freigabe_intranet",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/freigabe_intranet"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/freigabe_intranet",
+    "null": "NULL"
    },
    {
     "virtual":true,
