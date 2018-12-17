@@ -103,7 +103,7 @@ _:common-vars :variable
     ] ;
   :arguments (
     <#TransformCsv>
-    "fileName => this.variables.set('csv', fileName)"^^code:ecmaScript
+    "(p, fileName) => { p.variables.set('csv', fileName) }"^^code:ecmaScript
   ) .
 
 # ------------------------------
