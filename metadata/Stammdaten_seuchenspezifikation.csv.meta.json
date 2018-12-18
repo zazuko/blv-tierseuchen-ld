@@ -4,11 +4,11 @@
   "delimiter": ";"
  },
  "tableSchema": {
-  "aboutUrl": "https://blv.ld.admin.ch/animalpest/spez/{id}",
+  "aboutUrl": "http://ld.zazuko.com/animalpest/spez/{id}",
   "columns": [
    {
     "titles": "id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#id"
+    "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#id"
    },
    {
     "titles": "name_de",
@@ -37,11 +37,11 @@
    {
     "titles": "seuchenspezifikation_typ_id",
     "propertyUrl": "http://www.w3.org/2004/02/skos/core#broader",
-    "valueUrl": "https://blv.ld.admin.ch/animalpest/spez-typ/{seuchenspezifikation_typ_id}"
+    "valueUrl": "http://ld.zazuko.com/animalpest/spez-typ/{seuchenspezifikation_typ_id}"
    },
    {
     "titles": "oie_serotype",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#oie_serotype"
+    "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#oie_serotype"
    },
    {
     "virtual": true,

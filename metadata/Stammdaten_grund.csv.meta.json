@@ -4,11 +4,11 @@
   "delimiter": ";"
  },
  "tableSchema": {
-  "aboutUrl": "https://blv.ld.admin.ch/animalpest/grund/{id}",
+  "aboutUrl": "http://ld.zazuko.com/animalpest/grund/{id}",
   "columns": [
    {
     "titles": "id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#id"
+    "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#id"
    },
    {
     "titles": "code",

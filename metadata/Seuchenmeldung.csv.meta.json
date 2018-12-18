@@ -4,27 +4,27 @@
   "delimiter": ";"
  },
  "tableSchema": {
-  "aboutUrl": "https://blv.ld.admin.ch/animalpest/meldung/{id}",
+  "aboutUrl": "http://ld.zazuko.com/animalpest/meldung/{id}",
   "columns": [
    {
     "titles": "id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/id",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/id",
     "null": "NULL"
 
    },
    {
     "titles": "isvet_fall_id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/isvet_fall_id",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/isvet_fall_id",
     "null": "NULL"
    },
    {
     "titles": "isvet_id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/isvet_id",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/isvet_id",
     "null": "NULL"
    },
    {
     "titles": "diagnose_datum",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/diagnose_datum",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/diagnose_datum",
     "datatype": {
       "base": "date",
       "format": "dd.MM.yyyy"
@@ -32,22 +32,22 @@
    },
    {
     "titles": "diagnose_jahr",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/diagnose_jahr",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/diagnose_jahr",
     "suppressOutput":true
    },
    {
     "titles": "diagnose_monat",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/diagnose_monat",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/diagnose_monat",
     "suppressOutput":true
    },
    {
     "titles": "diagnose_woche",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/diagnose_woche",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/diagnose_woche",
     "suppressOutput":true
    },
    {
     "titles": "meldung_datum",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/meldung_datum",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/meldung_datum",
     "datatype": {
       "base": "date",
       "format": "dd.MM.yyyy"
@@ -56,102 +56,102 @@
    },
    {
     "titles": "betrieb_id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/betrieb_id",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/betrieb_id",
     "null": "NULL"
    },
    {
     "titles": "kanton_id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/kanton_id",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/kanton_id",
     "valueUrl": "http://classifications.data.admin.ch/canton/{kanton_id}",
     "null": "NULL"
    },
    {
     "titles": "bezirk_id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/bezirk_id",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/bezirk_id",
     "valueUrl": "http://classifications.data.admin.ch/district/{bezirk_id}",
     "null": "NULL"
    },
    {
     "titles": "gemeinde_id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/gemeinde_id",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/gemeinde_id",
     "valueUrl": "http://classifications.data.admin.ch/municipality/{gemeinde_id}",
     "null": "NULL"
    },
    {
     "titles": "tierart_id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/dimension/tier-art",
-    "valueUrl": "https://blv.ld.admin.ch/animalpest/tier-art/{tierart_id}",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/dimension/tier-art",
+    "valueUrl": "http://ld.zazuko.com/animalpest/tier-art/{tierart_id}",
     "null": "NULL"
    },
    {
     "titles": "tierkategorie_id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/dimension/tier-kategorie",
-    "valueUrl": "https://blv.ld.admin.ch/animalpest/tier-kategorie/{tierkategorie_id}",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/dimension/tier-kategorie",
+    "valueUrl": "http://ld.zazuko.com/animalpest/tier-kategorie/{tierkategorie_id}",
     "null": "NULL"
    },
    {
     "titles": "tierseuche_id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/dimension/tier-seuche",
-    "valueUrl": "https://blv.ld.admin.ch/animalpest/tier-seuche/{tierseuche_id}",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/dimension/tier-seuche",
+    "valueUrl": "http://ld.zazuko.com/animalpest/tier-seuche/{tierseuche_id}",
     "null": "NULL"
    },
    {
     "titles": "seuchenspezifikation_id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/dimension/spez",
-    "valueUrl": "https://blv.ld.admin.ch/animalpest/spez/{seuchenspezifikation_id}",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/dimension/spez",
+    "valueUrl": "http://ld.zazuko.com/animalpest/spez/{seuchenspezifikation_id}",
     "null": "NULL"
    },
    {
     "titles": "grund_id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/dimension/grund",
-    "valueUrl": "https://blv.ld.admin.ch/animalpest/grund/{grund_id}",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/dimension/grund",
+    "valueUrl": "http://ld.zazuko.com/animalpest/grund/{grund_id}",
     "null": "NULL"
    },
    {
     "titles": "tiere_bestand",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/measure/tiere_bestand",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/measure/tiere_bestand",
     "datatype":"number",
     "null": "NULL"
    },
    {
     "titles": "tiere_krank",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/measure/tiere_krank",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/measure/tiere_krank",
     "datatype":"number",
     "null": "NULL"
    },
    {
     "titles": "tiere_infiziert",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/measure/tiere_infiziert",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/measure/tiere_infiziert",
     "datatype":"number"
    },
    {
     "titles": "tiere_gestorben",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/measure/tiere_gestorben",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/measure/tiere_gestorben",
     "datatype":"number"
    },
    {
     "titles": "tiere_getoetet",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/measure/tiere_getoetet",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/measure/tiere_getoetet",
     "datatype":"number"
    },
    {
     "titles": "bse_geb_datum",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/bse_geb_datum",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/bse_geb_datum",
     "null": "NULL"
    },
    {
     "titles": "bse_grund_id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/bse_grund_id",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/bse_grund_id",
     "null": "NULL"
    },
    {
     "titles": "status",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/status",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/status",
     "null": "NULL"
    },
    {
     "titles": "freigabe_intranet",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/freigabe_intranet",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/freigabe_intranet",
     "null": "NULL",
     "datatype": {
       "base": "date",
@@ -161,7 +161,7 @@
    {
     "virtual":true,
     "propertyUrl":"http://purl.org/linked-data/cube#dataSet",
-    "valueUrl":"https://blv.ld.admin.ch/animalpest/dataset"
+    "valueUrl":"http://ld.zazuko.com/animalpest/dataset"
    },     
    {
      "virtual":true,

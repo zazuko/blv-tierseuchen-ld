@@ -4,11 +4,11 @@
   "delimiter": ";"
  },
  "tableSchema": {
-  "aboutUrl": "https://blv.ld.admin.ch/animalpest/tier-art/{id}",
+  "aboutUrl": "http://ld.zazuko.com/animalpest/tier-art/{id}",
   "columns": [
    {
     "titles": "id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#id"
+    "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#id"
    },
    {
     "titles": "name_de",
@@ -32,19 +32,19 @@
    },
    {
     "titles": "equinella_tierart",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#equinella_tierart"
+    "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#equinella_tierart"
    },
    {
     "titles": "oie_wild",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#oie_wild"
+    "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#oie_wild"
    },
    {
     "titles": "oie_species",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#oie_species"
+    "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#oie_species"
    },
    {
     "titles": "oie_measureunit",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#oie_measureunit"
+    "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#oie_measureunit"
    },
    {
     "virtual": true,

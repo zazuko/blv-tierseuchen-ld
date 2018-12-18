@@ -4,11 +4,11 @@
   "delimiter": ";"
  },
  "tableSchema": {
-  "aboutUrl": "https://blv.ld.admin.ch/animalpest/tier-kategorie/{id}",
+  "aboutUrl": "http://ld.zazuko.com/animalpest/tier-kategorie/{id}",
   "columns": [
    {
     "titles": "id",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/vocab#id"
+    "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#id"
    },
    {
     "titles": "name_de",
