@@ -24,7 +24,11 @@
    },
    {
     "titles": "diagnose_datum",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/diagnose_datum"
+    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/diagnose_datum",
+    "datatype": {
+      "base": "date",
+      "format": "dd.MM.yyyy"
+    }
    },
    {
     "titles": "diagnose_jahr",
@@ -146,14 +150,13 @@
     "null": "NULL"
    },
    {
-    "titles": "freigabe_internet",
-    "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/freigabe_internet",
-    "null": "NULL"
-   },
-   {
     "titles": "freigabe_intranet",
     "propertyUrl": "https://blv.ld.admin.ch/animalpest/attribute/freigabe_intranet",
-    "null": "NULL"
+    "null": "NULL",
+    "datatype": {
+      "base": "date",
+      "format": "dd.MM.yyyy"
+    }
    },
    {
     "virtual":true,
