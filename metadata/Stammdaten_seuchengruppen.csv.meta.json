@@ -1,0 +1,35 @@
+{
+ "@context": "http://www.w3.org/ns/csvw",
+ "dialect": {
+  "delimiter": ";"
+ },
+ "tableSchema": {
+  "aboutUrl": "http://ld.zazuko.com/animalpest/seuchengruppe/{id}",
+  "columns": [
+   {
+    "titles": "id",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#id"
+   },
+   {
+    "titles": "name_de",
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "de-CH"
+   },
+   {
+    "titles": "name_fr",
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "fr-CH"
+   },
+   {
+    "titles": "name_it",
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "it-CH"
+   },
+   {
+    "titles": "name_en",
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "en"
+   }
+  ]
+ }
+}

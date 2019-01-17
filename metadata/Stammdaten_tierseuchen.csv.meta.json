@@ -48,7 +48,8 @@
    },
    {
     "titles": "seuchengruppe_id",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#seuchengruppe_id"
+    "propertyUrl": "http://www.w3.org/2004/02/skos/core#broader",
+    "valueUrl": "http://ld.zazuko.com/animalpest/seuchengruppe/{seuchengruppe_id}"
    },
    {
     "titles": "bemerkung_de",
