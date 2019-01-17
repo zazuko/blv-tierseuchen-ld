@@ -1,6 +1,6 @@
 @base <urn:pipeline:tierseuchen-ld> .
-@prefix : <http://example.org/barnard59/> .
-@prefix code: <http://example.org/code/> .
+@prefix : <https://pipeline.described.at/> .
+@prefix code: <https://code.described.at/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 _:common-vars :variable
@@ -19,8 +19,8 @@ _:common-vars :variable
   :steps [
     :stepList (
       [ a :Step ;
-        :operation [ a code:ecmaScript; code:link <file:../lib/sequence> ];
-        :arguments ( <#Download-Sources> <#TransformFiles> ) ]
+        code:implementedBy [ a code:EcmaScript; code:link <file:../lib/sequence> ];
+        code:arguments ( <#Download-Sources> <#TransformFiles> ) ]
     ) ] .
 
 # ------------------------------
@@ -43,22 +43,22 @@ _:common-vars :variable
     _:common-vars .
 
 <#download> a :Step ;
-  :operation
+  code:implementedBy
     [
       code:link <node:barnard59-base#fetch> ;
-      a code:ecmaScript
+      a code:EcmaScript
     ] ;
-  :arguments (
-    "${sourceUrl}"^^code:ecmaScriptTemplateLiteral
+  code:arguments (
+    "${sourceUrl}"^^code:EcmaScriptTemplateLiteral
   ).
 
 <#extract> a :Step ;
-  :operation
+  code:implementedBy
     [
       code:link <file:../lib/zip#extract> ;
-      a code:ecmaScript
+      a code:EcmaScript
     ] ;
-  :arguments (
+  code:arguments (
     "sourceDir"^^:VariableName
   ).
 
@@ -77,33 +77,33 @@ _:common-vars :variable
   :variables _:common-vars .
 
 <#filterFiles> a :Step ;
-  :operation
+  code:implementedBy
     [
       code:link <node:barnard59-base#filter> ;
-      a code:ecmaScript
+      a code:EcmaScript
     ] ;
-  :arguments (
-    "fileName => fileName != 'Stammdaten_kanton.csv' && fileName != 'Stammdaten_bezirk.csv' && fileName != 'Stammdaten_gemeinde.csv'"^^code:ecmaScript
+  code:arguments (
+    "fileName => fileName != 'Stammdaten_kanton.csv' && fileName != 'Stammdaten_bezirk.csv' && fileName != 'Stammdaten_gemeinde.csv'"^^code:EcmaScript
   ) .
 
 <#readDir> a :Step ;
-  :operation
+  code:implementedBy
     [
       code:link <file:../lib/dir#iterateFiles> ;
-      a code:ecmaScript
+      a code:EcmaScript
     ] ;
-  :arguments (
+  code:arguments (
     "sourceDir"^^:VariableName
    ) .
 
 <#doTransform> a :Step ;
-  :operation [
+  code:implementedBy [
       code:link <node:barnard59-core#forEach> ;
-      a code:ecmaScript
+      a code:EcmaScript
     ] ;
-  :arguments (
+  code:arguments (
     <#TransformCsv>
-    "(p, fileName) => { p.variables.set('csv', fileName) }"^^code:ecmaScript
+    "(p, fileName) => { p.variables.set('csv', fileName) }"^^code:EcmaScript
   ) .
 
 # ------------------------------
@@ -120,19 +120,19 @@ _:common-vars :variable
   :variables _:common-vars.
 
 <#openCsv> a :Step ;
-  :operation [
+  code:implementedBy [
       code:link <node:fs#createReadStream> ;
-      a code:ecmaScript
+      a code:EcmaScript
     ] ;
-  :arguments ( "${sourceDir}/${csv}"^^code:ecmaScriptTemplateLiteral ) .
+  code:arguments ( "${sourceDir}/${csv}"^^code:EcmaScriptTemplateLiteral ) .
 
 <#parse> a :Step;
-  :operation
+  code:implementedBy
     [
       code:link <node:barnard59-formats#csvw.parse>;
-      a code:ecmaScript
+      a code:EcmaScript
     ];
-  :arguments ( <#parseMetadata> ).
+  code:arguments ( <#parseMetadata> ).
 
 <#parseMetadata> a :ObjectPipeline;
   :steps
@@ -141,31 +141,31 @@ _:common-vars :variable
     ].
 
 <#readMetadata> a :Step;
-  :operation
+  code:implementedBy
     [
       code:link <node:fs#createReadStream>;
-      a code:ecmaScript
+      a code:EcmaScript
     ];
-  :arguments ("metadata/${csv}.meta.json"^^code:ecmaScriptTemplateLiteral).
+  code:arguments ("metadata/${csv}.meta.json"^^code:EcmaScriptTemplateLiteral).
 
 <#parseMetadataStep> a :Step;
-  :operation
+  code:implementedBy
     [
       code:link <node:barnard59-formats#jsonld.parse>;
-      a code:ecmaScript
+      a code:EcmaScript
     ].
 
 <#serialize> a :Step;
-  :operation
+  code:implementedBy
     [
       code:link <node:barnard59-formats#ntriples.serialize> ;
-      a code:ecmaScript
+      a code:EcmaScript
     ].
 
 <#save> a :Step;
-  :operation
+  code:implementedBy
     [
       code:link <node:fs#createWriteStream>;
-      a code:ecmaScript
+      a code:EcmaScript
     ];
-  :arguments ("${targetDir}/${csv}.nt"^^code:ecmaScriptTemplateLiteral).
+  code:arguments ("${targetDir}/${csv}.nt"^^code:EcmaScriptTemplateLiteral).
