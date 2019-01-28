@@ -150,6 +150,15 @@
     "null": "NULL"
    },
    {
+    "titles": "freigabe_internet",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/freigabe_internet",
+    "null": "NULL",
+    "datatype": {
+      "base": "date",
+      "format": "dd.MM.yyyy"
+    }
+   },
+   {
     "titles": "freigabe_intranet",
     "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/freigabe_intranet",
     "null": "NULL",

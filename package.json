@@ -23,7 +23,7 @@
     "barnard59-core": "git+https://github.com/zazuko/barnard59-core.git",
     "barnard59-main": "git+https://github.com/zazuko/barnard59-main.git#master",
     "rdf-parser-csvw": "git+https://github.com/rdf-ext/rdf-parser-csvw.git#develop",
-    "unzipper": "^0.9.4"
+    "unzipper": "^0.9.10"
   },
   "devDependencies": {
     "standard": "^12.0.1"
