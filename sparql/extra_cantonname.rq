@@ -1,0 +1,12 @@
+PREFIX gont: <https://gont.ch/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT {
+    ?cantonUri rdfs:label ?cantonName .
+}
+WHERE { GRAPH <https://linked.opendata.swiss/graph/eCH-0071> {
+
+    ?cantonUri a gont:Canton ;
+        gont:longName ?cantonName .
+}}
