@@ -15,7 +15,7 @@ _:common-vars :variable
 #
 # ------------------------------
 
-<#Root> a :Pipeline ;
+<#Root> a :Pipeline, :Readable ;
   :steps [
     :stepList (
       [ a :Step ;
@@ -31,7 +31,7 @@ _:common-vars :variable
 #
 # ------------------------------
 
-<#Download-Sources> a :Pipeline ;
+<#Download-Sources> a :Pipeline, :Writable, :Readable ;
   :steps
     [
       :stepList ( <#download> <#extract> )
@@ -70,7 +70,7 @@ _:common-vars :variable
 #
 # ------------------------------
 
-<#TransformFiles> a :Pipeline ;
+<#TransformFiles> a :Pipeline, :Readable ;
   :steps [
       :stepList ( <#readDir> <#filterFiles> <#doTransform> )
     ] ;
@@ -134,7 +134,7 @@ _:common-vars :variable
     ];
   code:arguments ( <#parseMetadata> ).
 
-<#parseMetadata> a :ObjectPipeline;
+<#parseMetadata> a :Pipeline, :ReadableObjectMode;
   :steps
     [
       :stepList ( <#readMetadata> <#parseMetadataStep> )
