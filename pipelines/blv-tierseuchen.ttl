@@ -31,7 +31,7 @@ _:common-vars :variable
 #
 # ------------------------------
 
-<#Download-Sources> a :Pipeline, :Writable, :Readable ;
+<#Download-Sources> a :Pipeline, :Readable ;
   :steps
     [
       :stepList ( <#download> <#extract> )
