@@ -1,0 +1,44 @@
+{
+ "@context": "http://www.w3.org/ns/csvw",
+ "dialect": {
+  "delimiter": ";"
+ },
+ "tableSchema": {
+  "aboutUrl": "http://ld.zazuko.com/animalpest/tier-gruppe/{Gruppe_en}",
+  "columns": [
+   {
+    "titles": "id",
+    "propertyUrl": "http://example.org/tierid"
+   },
+   {
+    "titles": "name_de",
+    "propertyUrl": "http://example.org/tiername"
+   },
+   {
+    "titles": "Gruppe_de",
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "de-CH"
+   },
+   {
+    "titles": "Gruppe_fr",
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "fr-CH"
+   },
+   {
+    "titles": "Gruppe_it",
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "it-CH"
+   },
+   {
+    "titles": "Gruppe_en",
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "en"
+   },
+   {
+    "virtual": true,
+    "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+    "valueUrl": "http://www.w3.org/2004/02/skos/core#Concept"
+  }
+  ]
+ }
+}
