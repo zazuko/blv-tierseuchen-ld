@@ -4,7 +4,8 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 CONSTRUCT {
 
-    ?municipality rdfs:label ?mostRecentName .
+    ?municipality a gont:Municipality ; 
+        rdfs:label ?mostRecentName .
 
 } WHERE { GRAPH <https://linked.opendata.swiss/graph/eCH-0071> {
 
