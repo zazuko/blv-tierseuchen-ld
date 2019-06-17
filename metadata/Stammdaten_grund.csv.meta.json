@@ -11,10 +11,6 @@
     "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#id"
    },
    {
-    "titles": "code",
-    "propertyUrl": "http://www.w3.org/2004/02/skos/core#notation"
-   },
-   {
     "titles": "name_de",
     "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
     "lang": "de-CH"

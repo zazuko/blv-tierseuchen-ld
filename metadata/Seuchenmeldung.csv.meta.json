@@ -4,10 +4,10 @@
   "delimiter": ";"
  },
  "tableSchema": {
-  "aboutUrl": "http://ld.zazuko.com/animalpest/meldung/{id}",
+  "aboutUrl": "http://ld.zazuko.com/animalpest/meldung/{PrimaryKey}",
   "columns": [
    {
-    "titles": "id",
+    "titles": "PrimaryKey",
     "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/id",
     "null": "NULL"
 
@@ -60,21 +60,9 @@
     "null": "NULL"
    },
    {
-    "titles": "kanton_id",
+    "titles": "Canton",
     "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/kanton_id",
-    "valueUrl": "http://classifications.data.admin.ch/canton/{kanton_id}",
-    "null": "NULL"
-   },
-   {
-    "titles": "bezirk_id",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/bezirk_id",
-    "valueUrl": "http://classifications.data.admin.ch/district/{bezirk_id}",
-    "null": "NULL"
-   },
-   {
-    "titles": "gemeinde_id",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/gemeinde_id",
-    "valueUrl": "http://classifications.data.admin.ch/municipality/{gemeinde_id}",
+    "valueUrl": "http://classifications.data.admin.ch/canton/{Canton}",
     "null": "NULL"
    },
    {
