@@ -60,6 +60,21 @@
     "null": "NULL"
    },
    {
+    "titles": "coorinateX",
+    "propertyUrl": "http://example.org/coorinateX",
+    "null": "NULL"
+   },
+   {
+    "titles": "coordinateY",
+    "propertyUrl": "http://example.org/coordinateY",
+    "null": "NULL"
+   },
+   {
+    "titles": "PostalZone",
+    "propertyUrl": "http://example.org/postalZone",
+    "null": "NULL"
+   },
+   {
     "titles": "Canton",
     "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/kanton_id",
     "valueUrl": "http://classifications.data.admin.ch/canton/{Canton}",
@@ -69,6 +84,12 @@
     "titles": "tierart_id",
     "propertyUrl": "http://ld.zazuko.com/animalpest/dimension/tier-art",
     "valueUrl": "http://ld.zazuko.com/animalpest/tier-art/{tierart_id}",
+    "null": "NULL"
+   },
+   {
+    "titles": "tierart_angabe",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/dimension/tierart-angabe",
+    "valueUrl": "http://ld.zazuko.com/animalpest/tier-art/{tierart_angabe}",
     "null": "NULL"
    },
    {
@@ -123,13 +144,8 @@
     "datatype":"number"
    },
    {
-    "titles": "bse_geb_datum",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/bse_geb_datum",
-    "null": "NULL"
-   },
-   {
-    "titles": "bse_grund_id",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/bse_grund_id",
+    "titles": "bemerkung",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/bemerkung",
     "null": "NULL"
    },
    {
@@ -140,15 +156,6 @@
    {
     "titles": "freigabe_internet",
     "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/freigabe_internet",
-    "null": "NULL",
-    "datatype": {
-      "base": "date",
-      "format": "dd.MM.yyyy"
-    }
-   },
-   {
-    "titles": "freigabe_intranet",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/freigabe_intranet",
     "null": "NULL",
     "datatype": {
       "base": "date",
