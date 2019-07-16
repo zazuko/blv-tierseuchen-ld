@@ -4,7 +4,10 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 CONSTRUCT {
 
-    ?municipality rdfs:label ?mostRecentName .
+    ?municipality a gont:Municipality ; 
+        rdfs:label ?mostRecentName ;
+        gont:canton ?cantonUri ;
+        dcterms:identifier ?municipalityId .
 
 } WHERE { GRAPH <https://linked.opendata.swiss/graph/eCH-0071> {
 
@@ -23,9 +26,11 @@ CONSTRUCT {
     # 371: 3 versions, 171: one version
     #FILTER( ?municipality IN( <http://classifications.data.admin.ch/municipality/371>, <http://classifications.data.admin.ch/municipality/171>))
     
-    ?municipality gont:municipalityVersion ?versioned .
+    ?municipality gont:municipalityVersion ?versioned ;
+            gont:id ?municipalityId .
     
     ?versioned gont:shortName ?mostRecentName ;
+        gont:canton ?cantonUri ;
         gont:admissionEvent/gont:date ?mostRecentDate .
     
  }} 
