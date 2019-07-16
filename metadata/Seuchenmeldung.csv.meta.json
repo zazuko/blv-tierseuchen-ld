@@ -10,7 +10,6 @@
     "titles": "PrimaryKey",
     "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/id",
     "null": "NULL"
-
    },
    {
     "titles": "isvet_fall_id",
