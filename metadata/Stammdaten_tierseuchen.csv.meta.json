@@ -4,11 +4,72 @@
   "delimiter": ";"
  },
  "tableSchema": {
-  "aboutUrl": "http://ld.zazuko.com/animalpest/tier-seuche/{id}",
+  "aboutUrl": "http://ld.zazuko.com/animalpest/tier-seuche/{tierseuche_id}",
   "columns": [
    {
-    "titles": "id",
+    "titles": "tierseuche_id",
     "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#id"
+   },
+   {
+    "titles": "NK_BPDiseaseKey",
+    "propertyUrl": "http://example.org/NK_BPDiseaseKey"
+   },
+   {
+    "titles": "id",
+    "propertyUrl": "http://example.org/id"
+   },
+   {
+    "titles": "name_oie",
+    "propertyUrl": "http://example.org/name_oie"
+   },
+   {
+    "titles": "NK_BPDiseaseName",
+    "propertyUrl": "http://example.org/NK_BPDiseaseName"
+   },
+   {
+    "titles": "Text_de",
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "de-CH"
+   },
+   {
+    "titles": "Text_fr",
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "fr-CH"
+   },
+   {
+    "titles": "Text_it",
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "it-CH"
+   },
+   {
+    "titles": "Text_en",
+    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+    "lang": "en"
+   },
+   {
+    "titles": "OIECode",
+    "propertyUrl": "http://example.org/OIECode"
+   },
+   {
+    "titles": "IsNotifiable",
+    "propertyUrl": "http://example.org/IsNotifiable"
+   },
+   {
+    "titles": "kuerzel",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#kuerzel"
+   },
+   {
+    "titles": "code_intern",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#code_intern"
+   },
+   {
+    "titles": "code_oie",
+    "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#code_oie"
+   },
+   {
+    "titles": "seuchengruppe_id",
+    "propertyUrl": "http://www.w3.org/2004/02/skos/core#broader",
+    "valueUrl": "http://ld.zazuko.com/animalpest/seuchengruppe/{seuchengruppe_id}"
    },
    {
     "titles": "name_de",
@@ -29,27 +90,6 @@
     "titles": "name_en",
     "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
     "lang": "en"
-   },
-   {
-    "titles": "name_oie",
-    "propertyUrl": "http://www.w3.org/2004/02/skos/core#altLabel"
-   },
-   {
-    "titles": "kuerzel",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#kuerzel"
-   },
-   {
-    "titles": "code_intern",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#code_intern"
-   },
-   {
-    "titles": "code_oie",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#code_oie"
-   },
-   {
-    "titles": "seuchengruppe_id",
-    "propertyUrl": "http://www.w3.org/2004/02/skos/core#broader",
-    "valueUrl": "http://ld.zazuko.com/animalpest/seuchengruppe/{seuchengruppe_id}"
    },
    {
     "titles": "bemerkung_de",
