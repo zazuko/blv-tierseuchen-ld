@@ -20,7 +20,9 @@ _:common-vars :variable
     :stepList (
       [ a :Step ;
         code:implementedBy [ a code:EcmaScript; code:link <file:../lib/sequence> ];
-        code:arguments ( <#Download-Sources> <#TransformFiles> ) ]
+#        code:arguments ( <#Download-Sources> <#TransformFiles> ) ]
+        code:arguments ( <#TransformFiles> ) ]
+
     ) ] .
 
 # ------------------------------
