@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "standard && jest",
-    "start": "mkdir -p target source; barnard59 run --format text/turtle pipelines/blv-tierseuchen.ttl",
+    "start": "mkdir -p target source; barnard59 run --pipeline urn:pipeline:tierseuchen-ld#Root --format text/turtle pipelines/blv-tierseuchen.ttl",
     "clean-nt": "rm -f target/everything.nt && cat target/*.nt | sed '/_:/d' | sed '/<file/d' | sed '/#(No/d' | sed '/NULL/d'  > target/everything.nt",
     "pipeline": "npm start -- --pipeline"
   },
