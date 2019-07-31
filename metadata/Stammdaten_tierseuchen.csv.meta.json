@@ -1,6 +1,5 @@
 {
   "@context": "http://www.w3.org/ns/csvw",
-  "url": "example.csv",
   "dialect": {
     "delimiter": ";"
   },
@@ -32,28 +31,38 @@
         "suppressOutput": true
       },
       {
-        "titles": "oie_species",
-        "propertyUrl": "http://example.org/oie_species",
+        "titles": "code_intern",
+        "propertyUrl": "http://example.org/code_intern",
         "suppressOutput": true
       },
       {
-        "titles": "name_tg_de",
-        "propertyUrl": "http://example.org/name_tg_de",
+        "titles": "code_oie",
+        "propertyUrl": "http://example.org/code_oie",
         "suppressOutput": true
       },
       {
-        "titles": "name_tg_fr",
-        "propertyUrl": "http://example.org/name_tg_fr",
+        "titles": "seuchengruppe_id",
+        "propertyUrl": "http://example.org/seuchengruppe_id",
         "suppressOutput": true
       },
       {
-        "titles": "name_tg_it",
-        "propertyUrl": "http://example.org/name_tg_it",
+        "titles": "name_group_de",
+        "propertyUrl": "http://example.org/name_group_de",
         "suppressOutput": true
       },
       {
-        "titles": "name_tg_en",
-        "propertyUrl": "http://example.org/name_tg_en",
+        "titles": "name_group_fr",
+        "propertyUrl": "http://example.org/name_group_fr",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_group_it",
+        "propertyUrl": "http://example.org/name_group_it",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_group_en",
+        "propertyUrl": "http://example.org/name_group_en",
         "suppressOutput": true
       }
     ]

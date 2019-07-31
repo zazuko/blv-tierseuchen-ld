@@ -1,176 +1,142 @@
 {
- "@context": "http://www.w3.org/ns/csvw",
- "dialect": {
-  "delimiter": ";"
- },
- "tableSchema": {
-  "aboutUrl": "http://ld.zazuko.com/animalpest/meldung/{PrimaryKey}",
-  "columns": [
-   {
-    "titles": "PrimaryKey",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/id",
-    "null": "NULL"
-   },
-   {
-    "titles": "isvet_fall_id",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/isvet_fall_id",
-    "null": "NULL"
-   },
-   {
-    "titles": "isvet_id",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/isvet_id",
-    "null": "NULL"
-   },
-   {
-    "titles": "diagnose_datum",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/diagnose_datum",
-    "datatype": {
-      "base": "date",
-      "format": "dd.MM.yyyy"
-    }
-   },
-   {
-    "titles": "diagnose_jahr",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/diagnose_jahr",
-    "suppressOutput":true
-   },
-   {
-    "titles": "diagnose_monat",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/diagnose_monat",
-    "suppressOutput":true
-   },
-   {
-    "titles": "diagnose_woche",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/diagnose_woche",
-    "suppressOutput":true
-   },
-   {
-    "titles": "meldung_datum",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/meldung_datum",
-    "datatype": {
-      "base": "date",
-      "format": "dd.MM.yyyy"
-    },
-    "null": "NULL"
-   },
-   {
-    "titles": "betrieb_id",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/betrieb_id",
-    "null": "NULL"
-   },
-   {
-    "titles": "coorinateX",
-    "propertyUrl": "http://example.org/coorinateX",
-    "null": "NULL"
-   },
-   {
-    "titles": "coordinateY",
-    "propertyUrl": "http://example.org/coordinateY",
-    "null": "NULL"
-   },
-   {
-    "titles": "PostalZone",
-    "propertyUrl": "http://example.org/postalZone",
-    "null": "NULL"
-   },
-   {
-    "titles": "Canton",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/kanton_id",
-    "valueUrl": "http://classifications.data.admin.ch/canton/{Canton}",
-    "null": "NULL"
-   },
-   {
-    "titles": "tierart_id",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/dimension/tier-art",
-    "valueUrl": "http://ld.zazuko.com/animalpest/tier-art/{tierart_id}",
-    "null": "NULL"
-   },
-   {
-    "titles": "tierart_angabe",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/dimension/tierart-angabe",
-    "valueUrl": "http://ld.zazuko.com/animalpest/tier-art/{tierart_angabe}",
-    "null": "NULL"
-   },
-   {
-    "titles": "tierkategorie_id",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/dimension/tier-kategorie",
-    "valueUrl": "http://ld.zazuko.com/animalpest/tier-kategorie/{tierkategorie_id}",
-    "null": "NULL"
-   },
-   {
-    "titles": "tierseuche_id",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/dimension/tier-seuche",
-    "valueUrl": "http://ld.zazuko.com/animalpest/tier-seuche/{tierseuche_id}",
-    "null": "NULL"
-   },
-   {
-    "titles": "seuchenspezifikation_id",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/dimension/spez",
-    "valueUrl": "http://ld.zazuko.com/animalpest/spez/{seuchenspezifikation_id}",
-    "null": "NULL"
-   },
-   {
-    "titles": "grund_id",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/dimension/grund",
-    "valueUrl": "http://ld.zazuko.com/animalpest/grund/{grund_id}",
-    "null": "NULL"
-   },
-   {
-    "titles": "tiere_bestand",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/measure/tiere_bestand",
-    "datatype":"number",
-    "null": "NULL"
-   },
-   {
-    "titles": "tiere_krank",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/measure/tiere_krank",
-    "datatype":"number",
-    "null": "NULL"
-   },
-   {
-    "titles": "tiere_infiziert",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/measure/tiere_infiziert",
-    "datatype":"number"
-   },
-   {
-    "titles": "tiere_gestorben",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/measure/tiere_gestorben",
-    "datatype":"number"
-   },
-   {
-    "titles": "tiere_getoetet",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/measure/tiere_getoetet",
-    "datatype":"number"
-   },
-   {
-    "titles": "bemerkung",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/bemerkung",
-    "null": "NULL"
-   },
-   {
-    "titles": "status",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/status",
-    "null": "NULL"
-   },
-   {
-    "titles": "freigabe_internet",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/freigabe_internet",
-    "null": "NULL",
-    "datatype": {
-      "base": "date",
-      "format": "dd.MM.yyyy"
-    }
-   },
-   {
-    "virtual":true,
-    "propertyUrl":"http://purl.org/linked-data/cube#dataSet",
-    "valueUrl":"http://ld.zazuko.com/animalpest/dataset"
-   },     
-   {
-     "virtual":true,
-     "propertyUrl":"http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-     "valueUrl":"http://purl.org/linked-data/cube#Observation"
-   }
-  ]
- }
+  "@context": "http://www.w3.org/ns/csvw",
+  "dialect": {
+    "delimiter": ";"
+  },
+  "tableSchema": {
+    "aboutUrl": "http://ld.zazuko.com/animalpest/meldung/{id}",
+    "columns": [
+      {
+        "titles": "id",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/id"
+      },
+      {
+        "titles": "isvet_fall_id",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/isvet_fall_id"
+      },
+      {
+        "titles": "isvet_id",
+        "propertyUrl": "http://example.org/isvet_id"
+      },
+      {
+        "titles": "diagnose_datum",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/diagnose_datum",
+        "datatype": {
+          "base": "date",
+          "format": "dd.MM.yyyy"
+        }
+      },
+      {
+        "titles": "diagnose_jahr",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/diagnose_jahr"
+      },
+      {
+        "titles": "diagnose_monat",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/diagnose_monat"
+      },
+      {
+        "titles": "diagnose_woche",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/diagnose_woche"
+      },
+      {
+        "titles": "betrieb_id",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/betrieb_id"
+      },
+      {
+        "titles": "coordinateX",
+        "propertyUrl": "http://example.org/coordinateX"
+      },
+      {
+        "titles": "coordinateY",
+        "propertyUrl": "http://example.org/coordinateY"
+      },
+      {
+        "titles": "PostalZone",
+        "propertyUrl": "http://example.org/PostalZone"
+      },
+      {
+        "titles": "Canton",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/kanton_id",
+        "valueUrl": "http://classifications.data.admin.ch/canton/{Canton}"
+      },
+      {
+        "titles": "tierart_id",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/dimension/tier-art",
+        "valueUrl": "http://ld.zazuko.com/animalpest/tier-art/{tierart_id}"
+      },
+      {
+        "titles": "tierart_angabe",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/dimension/tierart-angabe",
+        "valueUrl": "http://ld.zazuko.com/animalpest/tier-art/{tierart_angabe}"
+      },
+      {
+        "titles": "tierseuche_id",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/dimension/tier-seuche",
+        "valueUrl": "http://ld.zazuko.com/animalpest/tier-seuche/{tierseuche_id}",
+        "suppressOutput": true
+      },
+      {
+        "titles": "seuchenspezifikation_id",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/dimension/spez",
+        "valueUrl": "http://ld.zazuko.com/animalpest/spez/{seuchenspezifikation_id}"
+      },
+      {
+        "titles": "grund_id",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/dimension/grund",
+        "valueUrl": "http://ld.zazuko.com/animalpest/grund/{grund_id}"
+      },
+      {
+        "titles": "tiere_bestand",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/measure/tiere_bestand",
+        "datatype": "number"
+      },
+      {
+        "titles": "tiere_krank",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/measure/tiere_krank",
+        "datatype": "number"
+      },
+      {
+        "titles": "tiere_infiziert",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/measure/tiere_infiziert",
+        "datatype": "number"
+      },
+      {
+        "titles": "tiere_gestorben",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/measure/tiere_gestorben",
+        "datatype": "number"
+      },
+      {
+        "titles": "tiere_getoetet",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/measure/tiere_getoetet",
+        "datatype": "number"
+      },
+      {
+        "titles": "bemerkung",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/bemerkung"
+      },
+      {
+        "titles": "status",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/status"
+      },
+      {
+        "titles": "freigabe_internet",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/freigabe_internet",
+        "null": "NULL",
+        "datatype": {
+          "base": "date",
+          "format": "dd.MM.yyyy"
+        }
+      },
+      {
+        "virtual": true,
+        "propertyUrl": "http://purl.org/linked-data/cube#dataSet",
+        "valueUrl": "http://ld.zazuko.com/animalpest/dataset"
+      },
+      {
+        "virtual": true,
+        "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "valueUrl": "http://purl.org/linked-data/cube#Observation"
+      }
+    ]
+  }
 }

@@ -30,31 +30,6 @@
         "titles": "name_en",
         "propertyUrl": "http://example.org/name_en",
         "suppressOutput": true
-      },
-      {
-        "titles": "oie_species",
-        "propertyUrl": "http://example.org/oie_species",
-        "suppressOutput": true
-      },
-      {
-        "titles": "name_tg_de",
-        "propertyUrl": "http://example.org/name_tg_de",
-        "suppressOutput": true
-      },
-      {
-        "titles": "name_tg_fr",
-        "propertyUrl": "http://example.org/name_tg_fr",
-        "suppressOutput": true
-      },
-      {
-        "titles": "name_tg_it",
-        "propertyUrl": "http://example.org/name_tg_it",
-        "suppressOutput": true
-      },
-      {
-        "titles": "name_tg_en",
-        "propertyUrl": "http://example.org/name_tg_en",
-        "suppressOutput": true
       }
     ]
   }

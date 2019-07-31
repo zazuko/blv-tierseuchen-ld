@@ -1,58 +1,66 @@
 {
- "@context": "http://www.w3.org/ns/csvw",
- "dialect": {
-  "delimiter": ";"
- },
- "tableSchema": {
-  "aboutUrl": "http://ld.zazuko.com/animalpest/spez/{id}",
-  "columns": [
-   {
-    "titles": "id",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#id"
-   },
-   {
-    "titles": "name_de",
-    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
-    "lang": "de-CH"
-   },
-   {
-    "titles": "name_fr",
-    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
-    "lang": "fr-CH"
-   },
-   {
-    "titles": "name_it",
-    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
-    "lang": "it-CH"
-   },
-   {
-    "titles": "name_en",
-    "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
-    "lang": "en"
-   },
-   {
-    "titles": "tierseuche_id",
-    "propertyUrl": "http://www.w3.org/2004/02/skos/core#notation"
-   },
-   {
-    "titles": "seuchenspezifikation_typ_id",
-    "propertyUrl": "http://www.w3.org/2004/02/skos/core#broader",
-    "valueUrl": "http://ld.zazuko.com/animalpest/spez-typ/{seuchenspezifikation_typ_id}"
-   },
-   {
-    "titles": "oie_serotype",
-    "propertyUrl": "http://ld.zazuko.com/animalpest/vocab#oie_serotype"
-   },
-   {
-    "virtual": true,
-    "propertyUrl": "http://www.w3.org/2004/02/skos/core#inScheme",
-    "valueUrl": "http://ld.zazuko.com/animalpest/scheme/Spez"
-   },
-   {
-    "virtual": true,
-    "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-    "valueUrl": "http://www.w3.org/2004/02/skos/core#Concept"
-   }
-  ]
- }
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "example.csv",
+  "dialect": {
+    "delimiter": ";"
+  },
+  "tableSchema": {
+    "columns": [
+      {
+        "titles": "id",
+        "propertyUrl": "http://example.org/id",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_de",
+        "propertyUrl": "http://example.org/name_de",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_fr",
+        "propertyUrl": "http://example.org/name_fr",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_it",
+        "propertyUrl": "http://example.org/name_it",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_en",
+        "propertyUrl": "http://example.org/name_en",
+        "suppressOutput": true
+      },
+      {
+        "titles": "tierseuche_id",
+        "propertyUrl": "http://example.org/tierseuche_id",
+        "suppressOutput": true
+      },
+      {
+        "titles": "seuchespezifikation_typ_id",
+        "propertyUrl": "http://example.org/seuchespezifikation_typ_id",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_typ_de",
+        "propertyUrl": "http://example.org/name_typ_de",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_typ_fr",
+        "propertyUrl": "http://example.org/name_typ_fr",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_typ_it",
+        "propertyUrl": "http://example.org/name_typ_it",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_typ_en",
+        "propertyUrl": "http://example.org/name_typ_en",
+        "suppressOutput": true
+      }
+    ]
+  }
 }
