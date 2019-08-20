@@ -8,7 +8,7 @@
     "columns": [
       {
         "titles": "id",
-        "propertyUrl": "http://schema.org/identifier"
+        "propertyUrl": "http://www.w3.org/2004/02/skos/core#notation"
       },
       {
         "titles": "name_de",
