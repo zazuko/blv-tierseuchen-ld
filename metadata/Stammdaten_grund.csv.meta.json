@@ -1,35 +1,44 @@
 {
   "@context": "http://www.w3.org/ns/csvw",
-  "url": "example.csv",
   "dialect": {
     "delimiter": ";"
   },
   "tableSchema": {
+    "aboutUrl": "http://ld.zazuko.com/animalpest/grund/{id}",
     "columns": [
       {
         "titles": "id",
-        "propertyUrl": "http://example.org/id",
-        "suppressOutput": true
+        "propertyUrl": "http://schema.org/identifier"
       },
       {
         "titles": "name_de",
-        "propertyUrl": "http://example.org/name_de",
-        "suppressOutput": true
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "de-CH"
       },
       {
         "titles": "name_fr",
-        "propertyUrl": "http://example.org/name_fr",
-        "suppressOutput": true
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "fr-CH"
       },
       {
         "titles": "name_it",
-        "propertyUrl": "http://example.org/name_it",
-        "suppressOutput": true
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "it-CH"
       },
       {
         "titles": "name_en",
-        "propertyUrl": "http://example.org/name_en",
-        "suppressOutput": true
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "en"
+      },
+      {
+        "virtual": true,
+        "propertyUrl": "http://www.w3.org/2004/02/skos/core#inScheme",
+        "valueUrl": "http://ld.zazuko.com/animalpest/scheme/Grund"
+      },
+      {
+        "virtual": true,
+        "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "valueUrl": "http://www.w3.org/2004/02/skos/core#Concept"
       }
     ]
   }
