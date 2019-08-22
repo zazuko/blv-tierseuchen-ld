@@ -64,6 +64,35 @@ _:common-vars :variable
     "sourceDir"^^:VariableName
   ).
 
+
+# ------------------------------
+#
+# Input files
+#
+# Some files have to be transformed twice so we specify them manually instead of reading the whole directory
+#
+# ------------------------------
+
+_:seuchenmeldung a :Variable ;
+  :name "seuchenmeldung" ;
+  :value "source/seuchenmeldung.csv" .
+
+_:Stammdaten_grund a :Variable ;
+  :name "Stammdaten_grund" ;
+  :value "source/Stammdaten_grund.csv" .
+
+_:Stammdaten_seuchenspezifikation a :Variable ;
+  :name "Stammdaten_seuchenspezifikation" ;
+  :value "source/Stammdaten_seuchenspezifikation.csv" .
+
+_:Stammdaten_tierart a :Variable ;
+  :name "Stammdaten_tierart" ;
+  :value "source/Stammdaten_tierart.csv" .
+
+_:Stammdaten_tierseuchen a :Variable ;
+  :name "Stammdaten_tierseuchen" ;
+  :value "source/Stammdaten_tierseuchen.csv" .
+
 # ------------------------------
 #
 # Transform pipeline
