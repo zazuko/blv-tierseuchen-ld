@@ -23,20 +23,24 @@
         "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/diagnose_datum",
         "datatype": {
           "base": "date",
-          "format": "dd.MM.yyyy"
-        }
+          "format": "yyyy-dd-MM"
+        },
+        "null": "NULL"
       },
       {
         "titles": "diagnose_jahr",
-        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/diagnose_jahr"
+        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/diagnose_jahr",
+        "null": "NULL"
       },
       {
         "titles": "diagnose_monat",
-        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/diagnose_monat"
+        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/diagnose_monat",
+        "null": "NULL"
       },
       {
         "titles": "diagnose_woche",
-        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/diagnose_woche"
+        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/diagnose_woche",
+        "null": "NULL"
       },
       {
         "titles": "betrieb_id",
@@ -44,11 +48,13 @@
       },
       {
         "titles": "coordinateX",
-        "propertyUrl": "http://example.org/coordinateX"
+        "propertyUrl": "https://gont.ch/municipality",
+        "valueUrl": "http://api.geo.admin.ch/rest/services/all/MapServer/identify?geometry={coordinateX},{coordinateY}&geometryFormat=geojson&geometryType=esriGeometryPoint&imageDisplay=1391,1070,96&layers=all:ch.swisstopo.swissboundaries3d-gemeinde-flaeche.fill&mapExtent=312250,-77500,1007750,457500&returnGeometry=false&tolerance=1"    
       },
       {
         "titles": "coordinateY",
-        "propertyUrl": "http://example.org/coordinateY"
+        "propertyUrl": "http://example.org/coordinateY",
+        "suppressOutput": true
       },
       {
         "titles": "PostalZone",
@@ -124,7 +130,7 @@
         "null": "NULL",
         "datatype": {
           "base": "date",
-          "format": "dd.MM.yyyy"
+          "format": "yyyy-dd-MM"
         }
       },
       {
