@@ -23,7 +23,7 @@
         "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/diagnose_datum",
         "datatype": {
           "base": "date",
-          "format": "yyyy-dd-MM"
+          "format": "yyyy-MM-dd"
         },
         "null": "NULL"
       },
@@ -49,7 +49,7 @@
       {
         "titles": "coordinateX",
         "propertyUrl": "https://gont.ch/municipality",
-        "valueUrl": "http://api.geo.admin.ch/rest/services/all/MapServer/identify?geometry={coordinateX},{coordinateY}&geometryFormat=geojson&geometryType=esriGeometryPoint&imageDisplay=1391,1070,96&layers=all:ch.swisstopo.swissboundaries3d-gemeinde-flaeche.fill&mapExtent=312250,-77500,1007750,457500&returnGeometry=false&tolerance=1"    
+        "valueUrl": "http://api.geo.admin.ch/rest/services/all/MapServer/identify?geometry={coordinateX},{coordinateY}&geometryFormat=geojson&geometryType=esriGeometryPoint&imageDisplay=1391,1070,96&lang=fr&layers=all:ch.swisstopo.swissboundaries3d-gemeinde-flaeche.fill&mapExtent=312250,-77500,1007750,457500&returnGeometry=false&tolerance=1"    
       },
       {
         "titles": "coordinateY",
@@ -94,27 +94,32 @@
       {
         "titles": "tiere_bestand",
         "propertyUrl": "http://ld.zazuko.com/animalpest/measure/tiere_bestand",
-        "datatype": "number"
+        "datatype": "number",
+        "null": "NULL"
       },
       {
         "titles": "tiere_krank",
         "propertyUrl": "http://ld.zazuko.com/animalpest/measure/tiere_krank",
-        "datatype": "number"
+        "datatype": "number",
+        "null": "NULL"
       },
       {
         "titles": "tiere_infiziert",
         "propertyUrl": "http://ld.zazuko.com/animalpest/measure/tiere_infiziert",
-        "datatype": "number"
+        "datatype": "number",
+        "null": "NULL"
       },
       {
         "titles": "tiere_gestorben",
         "propertyUrl": "http://ld.zazuko.com/animalpest/measure/tiere_gestorben",
-        "datatype": "number"
+        "datatype": "number",
+        "null": "NULL"
       },
       {
         "titles": "tiere_getoetet",
         "propertyUrl": "http://ld.zazuko.com/animalpest/measure/tiere_getoetet",
-        "datatype": "number"
+        "datatype": "number",
+        "null": "NULL"
       },
       {
         "titles": "bemerkung",
@@ -130,7 +135,7 @@
         "null": "NULL",
         "datatype": {
           "base": "date",
-          "format": "yyyy-dd-MM"
+          "format": "yyyy-MM-dd"
         }
       },
       {
