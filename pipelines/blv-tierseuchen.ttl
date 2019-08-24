@@ -146,7 +146,7 @@ _:Stammdaten_tierseuchen a :Variable ;
 <#TransformCsv> a :Pipeline ;
   :steps
     [
-      :stepList ( <#openCsv> <#parse> <#serialize> <#save> )
+      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <#serialize> <#save> )
     ] ;
   :variables _:common-vars.
 
@@ -185,6 +185,19 @@ _:Stammdaten_tierseuchen a :Variable ;
       code:link <node:barnard59-formats#jsonld.parse>;
       a code:EcmaScript
     ].
+
+<#municipalityLookup> a :Step ;
+  code:implementedBy
+    [
+      code:link <node:barnard59-base#map> ;
+      a code:EcmaScript
+    ] ;
+  code:arguments (
+    [
+      code:link <file:../lib/municipality-lookup.js> ;
+      a code:EcmaScript
+    ]
+  ) .
 
 <#serialize> a :Step;
   code:implementedBy
