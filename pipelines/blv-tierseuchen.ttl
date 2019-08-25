@@ -146,7 +146,7 @@ _:Stammdaten_tierseuchen a :Variable ;
 <#TransformCsv> a :Pipeline ;
   :steps
     [
-      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <#serialize> <#save> )
+      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <filterNotCsvw> <#serialize> <#save> )
     ] ;
   :variables _:common-vars.
 
@@ -198,6 +198,20 @@ _:Stammdaten_tierseuchen a :Variable ;
       a code:EcmaScript
     ]
   ) .
+
+<filterNotCsvw> a :Step;
+  code:implementedBy [ a code:EcmaScript;
+    code:link <node:barnard59-base#filter>
+ ];
+ code:arguments ( """quad => {
+    if (quad.predicate.value.startsWith('http://www.w3.org/ns/csvw#')) {
+	 return false
+	}
+	if (quad.predicate.value === 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' && quad.object.value.startsWith('http://www.w3.org/ns/csvw#')) {
+	 return false
+	}
+	return true
+	}"""^^code:EcmaScript ).
 
 <#serialize> a :Step;
   code:implementedBy
