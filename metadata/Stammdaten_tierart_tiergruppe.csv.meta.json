@@ -1,0 +1,81 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "../source/Stammdaten_tierart.csv",
+  "dialect": {
+    "delimiter": ";"
+  },
+  "tableSchema": {
+    "aboutUrl": "http://ld.zazuko.com/animalpest/tier-art/{id}",
+    "columns": [
+      {
+        "titles": "id",
+        "propertyUrl": "http://www.w3.org/2004/02/skos/core#notation",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_de",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "de-CH",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_fr",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "fr-CH",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_it",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "it-CH",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_en",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "en",
+        "suppressOutput": true
+      },
+      {
+        "titles": "oie_species",
+        "propertyUrl": "http://www.w3.org/2004/02/skos/core#broader",
+        "valueUrl": "http://ld.zazuko.com/animalpest/TODO/tier-art/{oie_species}",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_tg_de",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "de-CH",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_tg_fr",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "fr-CH",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_tg_it",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "it-CH",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_tg_en",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "en",
+        "suppressOutput": true
+      },
+      {
+        "virtual": true,
+        "propertyUrl": "http://www.w3.org/2004/02/skos/core#inScheme",
+        "valueUrl": "http://ld.zazuko.com/animalpest/scheme/Tierart"
+      },
+      {
+        "virtual": true,
+        "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "valueUrl": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ]
+  }
+}

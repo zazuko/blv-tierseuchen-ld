@@ -1,0 +1,91 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "../source/Stammdaten_tierseuchen.csv",
+  "dialect": {
+    "delimiter": ";"
+  },
+  "tableSchema": {
+    "aboutUrl": "http://ld.zazuko.com/animalpest/tier-seuche/{id}",
+    "columns": [
+      {
+        "titles": "id",
+        "propertyUrl": "http://www.w3.org/2004/02/skos/core#notation",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_de",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "de-CH",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_fr",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "fr-CH",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_it",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "it-CH",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_en",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "en",
+        "suppressOutput": true
+      },
+      {
+        "titles": "code_intern",
+        "propertyUrl": "http://example.org/code_intern",
+        "suppressOutput": true
+      },
+      {
+        "titles": "code_oie",
+        "propertyUrl": "http://example.org/code_oie",
+        "suppressOutput": true
+      },
+      {
+        "titles": "seuchengruppe_id",
+        "propertyUrl": "http://www.w3.org/2004/02/skos/core#broader",
+        "valueUrl": "http://ld.zazuko.com/animalpest/seuchengruppe/{seuchengruppe_id}",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_group_de",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "de-CH",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_group_fr",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "fr-CH",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_group_it",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "it-CH",
+        "suppressOutput": true
+      },
+      {
+        "titles": "name_group_en",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "en",
+        "suppressOutput": true
+      },
+      {
+        "virtual": true,
+        "propertyUrl": "http://www.w3.org/2004/02/skos/core#inScheme",
+        "valueUrl": "http://ld.zazuko.com/animalpest/scheme/Tierseuche"
+      },
+      {
+        "virtual": true,
+        "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "valueUrl": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ]
+  }
+}
