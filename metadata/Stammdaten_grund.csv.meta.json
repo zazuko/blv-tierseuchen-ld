@@ -5,7 +5,7 @@
     "delimiter": ";"
   },
   "tableSchema": {
-    "aboutUrl": "http://ld.zazuko.com/animalpest/grund/{id}",
+    "aboutUrl": "http://ld.zazuko.com/animalpest/reason/{id}",
     "columns": [
       {
         "titles": "id",
@@ -34,7 +34,7 @@
       {
         "virtual": true,
         "propertyUrl": "http://www.w3.org/2004/02/skos/core#inScheme",
-        "valueUrl": "http://ld.zazuko.com/animalpest/scheme/Grund"
+        "valueUrl": "http://ld.zazuko.com/animalpest/scheme/Reason"
       },
       {
         "virtual": true,

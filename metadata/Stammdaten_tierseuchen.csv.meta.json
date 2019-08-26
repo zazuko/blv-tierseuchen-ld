@@ -5,36 +5,31 @@
     "delimiter": ";"
   },
   "tableSchema": {
-    "aboutUrl": "http://ld.zazuko.com/animalpest/tier-seuche/{id}",
+    "aboutUrl": "http://ld.zazuko.com/animalpest/animaldisease/{id}",
     "columns": [
       {
         "titles": "id",
-        "propertyUrl": "http://www.w3.org/2004/02/skos/core#notation",
-        "suppressOutput": true
+        "propertyUrl": "http://www.w3.org/2004/02/skos/core#notation"
       },
       {
         "titles": "name_de",
         "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
-        "lang": "de-CH",
-        "suppressOutput": true
+        "lang": "de-CH"
       },
       {
         "titles": "name_fr",
         "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
-        "lang": "fr-CH",
-        "suppressOutput": true
+        "lang": "fr-CH"
       },
       {
         "titles": "name_it",
         "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
-        "lang": "it-CH",
-        "suppressOutput": true
+        "lang": "it-CH"
       },
       {
         "titles": "name_en",
         "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
-        "lang": "en",
-        "suppressOutput": true
+        "lang": "en"
       },
       {
         "titles": "code_intern",
@@ -49,8 +44,7 @@
       {
         "titles": "seuchengruppe_id",
         "propertyUrl": "http://www.w3.org/2004/02/skos/core#broader",
-        "valueUrl": "http://ld.zazuko.com/animalpest/seuchengruppe/{seuchengruppe_id}",
-        "suppressOutput": true
+        "valueUrl": "http://ld.zazuko.com/animalpest/animaldisease/group/{seuchengruppe_id}"
       },
       {
         "titles": "name_group_de",
@@ -79,7 +73,7 @@
       {
         "virtual": true,
         "propertyUrl": "http://www.w3.org/2004/02/skos/core#inScheme",
-        "valueUrl": "http://ld.zazuko.com/animalpest/scheme/Tierseuche"
+        "valueUrl": "http://ld.zazuko.com/animalpest/scheme/Animaldisease"
       },
       {
         "virtual": true,

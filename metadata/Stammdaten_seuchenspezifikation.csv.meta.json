@@ -5,7 +5,7 @@
     "delimiter": ";"
   },
   "tableSchema": {
-    "aboutUrl": "http://ld.zazuko.com/animalpest/spez/{id}",
+    "aboutUrl": "http://ld.zazuko.com/animalpest/phenotype/{id}",
     "columns": [
       {
         "titles": "id",
@@ -44,7 +44,7 @@
       {
         "titles": "seuchespezifikation_typ_id",
         "propertyUrl": "http://www.w3.org/2004/02/skos/core#broader",
-        "valueUrl": "http://ld.zazuko.com/animalpest/spez-typ/{seuchenspezifikation_typ_id}",
+        "valueUrl": "http://ld.zazuko.com/animalpest/phenotype/group/{seuchenspezifikation_typ_id}",
         "suppressOutput": true
       },
       {
@@ -74,7 +74,7 @@
       {
         "virtual": true,
         "propertyUrl": "http://www.w3.org/2004/02/skos/core#inScheme",
-        "valueUrl": "http://ld.zazuko.com/animalpest/scheme/Spez"
+        "valueUrl": "http://ld.zazuko.com/animalpest/scheme/Phenotype"
       },
       {
         "virtual": true,

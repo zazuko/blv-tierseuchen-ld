@@ -5,42 +5,36 @@
     "delimiter": ";"
   },
   "tableSchema": {
-    "aboutUrl": "http://ld.zazuko.com/animalpest/tier-art/{id}",
+    "aboutUrl": "http://ld.zazuko.com/animalpest/species/{id}",
     "columns": [
       {
         "titles": "id",
-        "propertyUrl": "http://www.w3.org/2004/02/skos/core#notation",
-        "suppressOutput": true
+        "propertyUrl": "http://www.w3.org/2004/02/skos/core#notation"
       },
       {
         "titles": "name_de",
         "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
-        "lang": "de-CH",
-        "suppressOutput": true
+        "lang": "de-CH"
       },
       {
         "titles": "name_fr",
         "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
-        "lang": "fr-CH",
-        "suppressOutput": true
+        "lang": "fr-CH"
       },
       {
         "titles": "name_it",
         "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
-        "lang": "it-CH",
-        "suppressOutput": true
+        "lang": "it-CH"
       },
       {
         "titles": "name_en",
         "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
-        "lang": "en",
-        "suppressOutput": true
+        "lang": "en"
       },
       {
         "titles": "oie_species",
         "propertyUrl": "http://www.w3.org/2004/02/skos/core#broader",
-        "valueUrl": "http://ld.zazuko.com/animalpest/TODO/tier-art/{oie_species}",
-        "suppressOutput": true
+        "valueUrl": "http://ld.zazuko.com/animalpest/species/group/{oie_species}"
       },
       {
         "titles": "name_tg_de",
@@ -69,7 +63,7 @@
       {
         "virtual": true,
         "propertyUrl": "http://www.w3.org/2004/02/skos/core#inScheme",
-        "valueUrl": "http://ld.zazuko.com/animalpest/scheme/Tierart"
+        "valueUrl": "http://ld.zazuko.com/animalpest/scheme/Species"
       },
       {
         "virtual": true,
