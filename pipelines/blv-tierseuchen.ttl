@@ -5,6 +5,7 @@
 
 _:common-vars :variable
   [ a :Variable; :name "targetDir"; :value "target" ] ,
+  [ a :Variable; :name "mappingsDir"; :value "metadata" ],
   [ a :Variable; :name "sourceDir"; :value "source" ] .
 
 # ------------------------------
@@ -64,35 +65,6 @@ _:common-vars :variable
     "sourceDir"^^:VariableName
   ).
 
-
-# ------------------------------
-#
-# Input files
-#
-# Some files have to be transformed twice so we specify them manually instead of reading the whole directory
-#
-# ------------------------------
-
-_:seuchenmeldung a :Variable ;
-  :name "seuchenmeldung" ;
-  :value "source/seuchenmeldung.csv" .
-
-_:Stammdaten_grund a :Variable ;
-  :name "Stammdaten_grund" ;
-  :value "source/Stammdaten_grund.csv" .
-
-_:Stammdaten_seuchenspezifikation a :Variable ;
-  :name "Stammdaten_seuchenspezifikation" ;
-  :value "source/Stammdaten_seuchenspezifikation.csv" .
-
-_:Stammdaten_tierart a :Variable ;
-  :name "Stammdaten_tierart" ;
-  :value "source/Stammdaten_tierart.csv" .
-
-_:Stammdaten_tierseuchen a :Variable ;
-  :name "Stammdaten_tierseuchen" ;
-  :value "source/Stammdaten_tierseuchen.csv" .
-
 # ------------------------------
 #
 # Transform pipeline
@@ -103,19 +75,9 @@ _:Stammdaten_tierseuchen a :Variable ;
 
 <#TransformFiles> a :Pipeline, :Readable ;
   :steps [
-      :stepList ( <#readDir> <#filterFiles> <#doTransform> )
+      :stepList ( <#readDir> <#doTransform> )
     ] ;
   :variables _:common-vars .
-
-<#filterFiles> a :Step ;
-  code:implementedBy
-    [
-      code:link <node:barnard59-base#filter> ;
-      a code:EcmaScript
-    ] ;
-  code:arguments (
-    "fileName => fileName != 'Stammdaten_kanton.csv' && fileName != 'Stammdaten_bezirk.csv' && fileName != 'Stammdaten_gemeinde.csv'"^^code:EcmaScript
-  ) .
 
 <#readDir> a :Step ;
   code:implementedBy
@@ -124,7 +86,7 @@ _:Stammdaten_tierseuchen a :Variable ;
       a code:EcmaScript
     ] ;
   code:arguments (
-    "sourceDir"^^:VariableName
+    "mappingsDir"^^:VariableName
    ) .
 
 <#doTransform> a :Step ;
@@ -134,7 +96,7 @@ _:Stammdaten_tierseuchen a :Variable ;
     ] ;
   code:arguments (
     <#TransformCsv>
-    "(p, fileName) => { p.variables.set('csv', fileName) }"^^code:EcmaScript
+    "(p, fileName) => { p.variables.set('csvw', fileName) }"^^code:EcmaScript
   ) .
 
 # ------------------------------
@@ -152,10 +114,10 @@ _:Stammdaten_tierseuchen a :Variable ;
 
 <#openCsv> a :Step ;
   code:implementedBy [
-      code:link <node:fs#createReadStream> ;
+      code:link <file:../lib/csv#openFromCsvw> ;
       a code:EcmaScript
     ] ;
-  code:arguments ( "${sourceDir}/${csv}"^^code:EcmaScriptTemplateLiteral ) .
+  code:arguments ( "metadata/${csvw}"^^code:EcmaScriptTemplateLiteral ) .
 
 <#parse> a :Step;
   code:implementedBy
@@ -177,7 +139,7 @@ _:Stammdaten_tierseuchen a :Variable ;
       code:link <node:fs#createReadStream>;
       a code:EcmaScript
     ];
-  code:arguments ("metadata/${csv}.meta.json"^^code:EcmaScriptTemplateLiteral).
+  code:arguments ("metadata/${csvw}"^^code:EcmaScriptTemplateLiteral).
 
 <#parseMetadataStep> a :Step;
   code:implementedBy
@@ -226,4 +188,4 @@ _:Stammdaten_tierseuchen a :Variable ;
       code:link <node:fs#createWriteStream>;
       a code:EcmaScript
     ];
-  code:arguments ("${targetDir}/${csv}.nt"^^code:EcmaScriptTemplateLiteral).
+  code:arguments ("${targetDir}/${csvw.replace('.csv.meta.json', '')}.nt"^^code:EcmaScriptTemplateLiteral).

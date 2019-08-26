@@ -13,6 +13,7 @@ overriden from command line
 
 | parameter | default value | description |
 | --- | --- | --- |
+| mappingsDir | metadata | directory containing the CSVW files |
 | sourceDir | source | location for extracted files |
 | targetDir | target | directory to write resulting n-triples  documents |
 | sourceUrl | http://ktk.netlabs.org/misc/rdf/seuchenmeldungen.zip ||
@@ -44,18 +45,18 @@ npm run pipeline -- urn:pipeline:tierseuchen-ld#TransformFiles
 ```
 
 Parameters:
-* `sourceDir`
+* `mappingsDir`
 * `targetDir`
 
-#### Process a single file
+#### Process a single mapping
 
 ```
-npm run pipeline -- urn:pipeline:tierseuchen-ld#TransformCsv --variable csv=Stammdaten_tierart.csv
+npm run pipeline -- urn:pipeline:tierseuchen-ld#TransformCsv --variable csvw=Stammdaten_tierart.csv.meta.json
 ```
 
 Parameters:
-* `csv` (mandatory)
-* `sourceDir`
+* `csvw` (mandatory)
+* `mappingsDir`
 * `targetDir`
 
 ### CSVW mappings

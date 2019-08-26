@@ -1,5 +1,6 @@
 {
   "@context": "http://www.w3.org/ns/csvw",
+  "url": "../source/Stammdaten_seuchenspezifikation.csv",
   "dialect": {
     "delimiter": ";"
   },
