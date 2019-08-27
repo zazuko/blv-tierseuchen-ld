@@ -5,68 +5,70 @@
     "delimiter": ";"
   },
   "tableSchema": {
-    "aboutUrl": "http://ld.zazuko.com/animalpest/phenotype/{id}",
+    "aboutUrl": "http://ld.zazuko.com/animalpest/phenotype/group/{seuchespezifikation_typ_id}",
     "columns": [
       {
         "titles": "id",
-        "propertyUrl": "http://schema.org/identifier"
+        "propertyUrl": "http://schema.org/identifier",
+        "suppressOutput": true
       },
       {
         "titles": "name_de",
-        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
-        "lang": "de-CH"
-      },
-      {
-        "titles": "name_fr",
-        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
-        "lang": "fr-CH"
-      },
-      {
-        "titles": "name_it",
-        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
-        "lang": "fr-CH"
-      },
-      {
-        "titles": "name_en",
-        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
-        "lang": "en"
-      },
-      {
-        "titles": "tierseuche_id",
-        "propertyUrl": "http://www.w3.org/2004/02/skos/core#notation"
-      },
-      {
-        "titles": "seuchespezifikation_typ_id",
-        "propertyUrl": "http://www.w3.org/2004/02/skos/core#broader",
-        "valueUrl": "http://ld.zazuko.com/animalpest/phenotype/group/{seuchespezifikation_typ_id}"      },
-      {
-        "titles": "name_typ_de",
         "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
         "lang": "de-CH",
         "suppressOutput": true
       },
       {
-        "titles": "name_typ_fr",
+        "titles": "name_fr",
         "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
         "lang": "fr-CH",
         "suppressOutput": true
       },
       {
-        "titles": "name_typ_it",
+        "titles": "name_it",
         "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
-        "lang": "it-CH",
+        "lang": "fr-CH",
         "suppressOutput": true
       },
       {
-        "titles": "name_typ_en",
+        "titles": "name_en",
         "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
         "lang": "en",
         "suppressOutput": true
       },
       {
+        "titles": "tierseuche_id",
+        "propertyUrl": "http://www.w3.org/2004/02/skos/core#notation",
+        "suppressOutput": true
+      },
+      {
+        "titles": "seuchespezifikation_typ_id",
+        "propertyUrl": "http://www.w3.org/2004/02/skos/core#notation"
+      },
+      {
+        "titles": "name_typ_de",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "de-CH"
+      },
+      {
+        "titles": "name_typ_fr",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "fr-CH"
+      },
+      {
+        "titles": "name_typ_it",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "it-CH"
+      },
+      {
+        "titles": "name_typ_en",
+        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
+        "lang": "en"
+      },
+      {
         "virtual": true,
         "propertyUrl": "http://www.w3.org/2004/02/skos/core#inScheme",
-        "valueUrl": "http://ld.zazuko.com/animalpest/scheme/Phenotype"
+        "valueUrl": "http://ld.zazuko.com/animalpest/scheme/PhenotypeGroup"
       },
       {
         "virtual": true,
