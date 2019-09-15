@@ -2,7 +2,7 @@
   "@context": "http://www.w3.org/ns/csvw",
   "url": "../source/Stammdaten_grund.csv",
   "dialect": {
-    "delimiter": ";"
+    "delimiter": "~"
   },
   "tableSchema": {
     "aboutUrl": "http://ld.zazuko.com/animalpest/reason/{id}",
