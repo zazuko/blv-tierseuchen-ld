@@ -2,7 +2,11 @@
   "@context": "http://www.w3.org/ns/csvw",
   "url": "../source/Seuchenmeldungen.csv",
   "dialect": {
-    "delimiter": "~"
+    "delimiter": "~",
+    "quoteChar": {
+      "@value": "false",
+      "@type": "xsd:boolean"
+    }
   },
   "tableSchema": {
     "aboutUrl": "http://ld.zazuko.com/animalpest/report/{id}",
