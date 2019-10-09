@@ -108,8 +108,8 @@ _:common-vars :variable
 <#TransformCsv> a :Pipeline ;
   :steps
     [
-      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <filterNotCsvw> <#serialize> <#save> )
-#      :stepList ( <#openCsv> <#parse> <filterNotCsvw> <#serialize> <#save> )
+#      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <filterNotCsvw> <#serialize> <#save> )
+      :stepList ( <#openCsv> <#parse> <filterNotCsvw> <#serialize> <#save> )
 
     ] ;
   :variables _:common-vars.
