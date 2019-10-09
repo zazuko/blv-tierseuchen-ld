@@ -1,15 +1,19 @@
-image: node:8
+image: node:12
 before_script:
   - npm install
 
 stages:
   - build
-  - staging
 
-tierseuchen_build:
+pipeline_build:
   stage: build
   script:
     - npm run start
+    - npm run clean-nt
+  artifacts:
+    paths:
+      - target/everything.nt
+    expire_in: 1 day
   # except:
   #   variables:
   #       - $CRON
