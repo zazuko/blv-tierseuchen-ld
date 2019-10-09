@@ -70,7 +70,7 @@
       },
       {
         "titles": "Canton",
-        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/kanton_id",
+        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/canton",
         "valueUrl": "http://classifications.data.admin.ch/canton/{Canton}"
       },
       {
