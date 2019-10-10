@@ -16,12 +16,14 @@ _:common-vars :variable
 #
 # ------------------------------
 
-<#Root> a :Pipeline, :Readable ;
+# TODO readable weg
+<#Root> a :Pipeline, :Readable;
   :steps [
     :stepList (
       [ a :Step ;
         code:implementedBy [ a code:EcmaScript; code:link <file:../lib/sequence> ];
-        code:arguments ( <#Download-Sources> <#TransformFiles> ) ]
+        code:arguments ( <#Download-Sources> <#TransformFiles>  ) ]
+
 #        code:arguments ( <#TransformFiles> ) ]
 
     ) ] .
@@ -73,9 +75,9 @@ _:common-vars :variable
 #
 # ------------------------------
 
-<#TransformFiles> a :Pipeline, :Readable ;
+<#TransformFiles> a :Pipeline ;
   :steps [
-      :stepList ( <#readDir> <#doTransform> )
+      :stepList ( <#readDir> <#doTransform> <#sparqlInsert> <#serialize> <#save>)
     ] ;
   :variables _:common-vars .
 
@@ -105,12 +107,14 @@ _:common-vars :variable
 #
 # ------------------------------
 
-<#TransformCsv> a :Pipeline ;
+# TODO muss readable werden
+
+<#TransformCsv> a :Pipeline, :ReadableObjectMode ;
   :steps
     [
-#      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <filterNotCsvw> <#serialize> <#save> )
-#      :stepList ( <#openCsv> <#parse> <filterNotCsvw> <#serialize> <#save> )
-     :stepList ( <#openCsv> <#parse> <filterNotCsvw> <sparqlInsert> <#serialize> <#save> )
+#      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <#filterNotCsvw> <#serialize> <#save> )
+#      :stepList ( <#openCsv> <#parse> <#filterNotCsvw> <#serialize> <#save> )
+     :stepList ( <#openCsv> <#parse> <#filterNotCsvw> )
 
 
     ] ;
@@ -165,7 +169,7 @@ _:common-vars :variable
     ]
   ) .
 
-<filterNotCsvw> a :Step;
+<#filterNotCsvw> a :Step;
   code:implementedBy [ a code:EcmaScript;
     code:link <node:barnard59-base#filter>
  ];
@@ -203,4 +207,4 @@ _:common-vars :variable
       code:link <node:fs#createWriteStream>;
       a code:EcmaScript
     ];
-  code:arguments ("${targetDir}/${csvw.replace('.csv.meta.json', '')}.nt"^^code:EcmaScriptTemplateLiteral).
+  code:arguments ("${targetDir}/everything.nt"^^code:EcmaScriptTemplateLiteral).
