@@ -110,7 +110,7 @@ _:common-vars :variable
     [
 #      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <filterNotCsvw> <#serialize> <#save> )
 #      :stepList ( <#openCsv> <#parse> <filterNotCsvw> <#serialize> <#save> )
-      :stepList ( <#openCsv> <#parse> <filterNotCsvw> <sparqlInsert> <#serialize> <#save> )
+     :stepList ( <#openCsv> <#parse> <filterNotCsvw> <sparqlInsert> <#serialize> <#save> )
 
 
     ] ;
@@ -186,7 +186,7 @@ _:common-vars :variable
   code:arguments [
     code:name "queries";
     code:value (
-      """ INSERT {?obs a <http://example.org/Sugus } WHERE { ?obs a <http://purl.org/linked-data/cube#Observation> } """
+      """ INSERT {?obs a <http://example.org/Sugus> } WHERE { ?obs a <http://purl.org/linked-data/cube#Observation> } """
     )
   ].
 
