@@ -1,4 +1,4 @@
-image: node:12
+image: zazukoians/node-java-jena
 before_script:
   - npm install
 
