@@ -186,7 +186,7 @@ _:common-vars :variable
   code:arguments [
     code:name "queries";
     code:value (
-      "${(require('fs').readFileSync('test.rq').toString())()}"^^code:EcmaScriptTemplateLiteral 
+      "require('fs').readFileSync('test.rq').toString()"^^code:EcmaScript
     )
   ].
 
