@@ -186,7 +186,8 @@ _:common-vars :variable
   code:arguments [
     code:name "queries";
     code:value (
-      "require('fs').readFileSync('test.rq').toString()"^^code:EcmaScript
+      "require('fs').readFileSync('sparql/extra_municipality2currentname.rq').toString()"^^code:EcmaScript
+      "require('fs').readFileSync('sparql/extra_cantonname.rq').toString()"^^code:EcmaScript
     )
   ].
 

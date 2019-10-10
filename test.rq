@@ -1,1 +1,0 @@
-INSERT {?obs a <http://example.org/Sugus> } WHERE { ?obs a <http://purl.org/linked-data/cube#Observation> }
