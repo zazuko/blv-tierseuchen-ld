@@ -108,8 +108,10 @@ _:common-vars :variable
 <#TransformCsv> a :Pipeline ;
   :steps
     [
-      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <filterNotCsvw> <#serialize> <#save> )
+#      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <filterNotCsvw> <#serialize> <#save> )
 #      :stepList ( <#openCsv> <#parse> <filterNotCsvw> <#serialize> <#save> )
+      :stepList ( <#openCsv> <#parse> <filterNotCsvw> <sparqlInsert> <#serialize> <#save> )
+
 
     ] ;
   :variables _:common-vars.
@@ -176,6 +178,17 @@ _:common-vars :variable
 	}
 	return true
 	}"""^^code:EcmaScript ).
+
+<#sparqlInsert> a :Step;
+  code:implementedBy [ a code:EcmaScript;
+    code:link <node:barnard59-tdb#update>
+  ];
+  code:arguments [
+    code:name "queries";
+    code:value (
+      """ INSERT {?obs a <http://example.org/Sugus } WHERE { ?obs a <http://purl.org/linked-data/cube#Observation> } """
+    )
+  ].
 
 <#serialize> a :Step;
   code:implementedBy

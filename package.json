@@ -22,6 +22,7 @@
   "dependencies": {
     "barnard59": "0.0.5",
     "barnard59-formats": "0.0.6",
+    "barnard59-tdb": "git+https://github.com/zazuko/barnard59-tdb.git",
     "node-fetch": "^2.6.0",
     "rdf-ext": "^1.3.0",
     "unzipper": "^0.9.11"
