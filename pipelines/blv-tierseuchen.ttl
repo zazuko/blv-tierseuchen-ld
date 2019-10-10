@@ -186,7 +186,7 @@ _:common-vars :variable
   code:arguments [
     code:name "queries";
     code:value (
-      """ INSERT {?obs a <http://example.org/Sugus> } WHERE { ?obs a <http://purl.org/linked-data/cube#Observation> } """
+      "${(require('fs').readFileSync('test.rq').toString())()}"^^EcmaScriptTemplateLiteral
     )
   ].
 
