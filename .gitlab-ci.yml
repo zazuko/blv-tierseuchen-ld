@@ -9,7 +9,6 @@ pipeline_build:
   stage: build
   script:
     - npm run start
-#    - npm run clean-nt
   artifacts:
     paths:
       - target/everything.nt

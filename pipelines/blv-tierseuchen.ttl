@@ -16,7 +16,6 @@ _:common-vars :variable
 #
 # ------------------------------
 
-# TODO readable weg
 <#Root> a :Pipeline, :Readable;
   :steps [
     :stepList (
@@ -107,13 +106,10 @@ _:common-vars :variable
 #
 # ------------------------------
 
-# TODO muss readable werden
-
 <#TransformCsv> a :Pipeline, :ReadableObjectMode ;
   :steps
     [
-#      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <#filterNotCsvw> <#serialize> <#save> )
-#      :stepList ( <#openCsv> <#parse> <#filterNotCsvw> <#serialize> <#save> )
+#      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <#filterNotCsvw> )
      :stepList ( <#openCsv> <#parse> <#filterNotCsvw> )
 
 
