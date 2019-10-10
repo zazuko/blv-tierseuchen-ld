@@ -22,9 +22,6 @@ _:common-vars :variable
       [ a :Step ;
         code:implementedBy [ a code:EcmaScript; code:link <file:../lib/sequence> ];
         code:arguments ( <#Download-Sources> <#TransformFiles>  ) ]
-
-#        code:arguments ( <#TransformFiles> ) ]
-
     ) ] .
 
 # ------------------------------
@@ -109,8 +106,8 @@ _:common-vars :variable
 <#TransformCsv> a :Pipeline, :ReadableObjectMode ;
   :steps
     [
-#      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <#filterNotCsvw> )
-     :stepList ( <#openCsv> <#parse> <#filterNotCsvw> )
+      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <#filterNotCsvw> )
+#     :stepList ( <#openCsv> <#parse> <#filterNotCsvw> )
 
 
     ] ;
