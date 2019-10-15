@@ -74,6 +74,8 @@ _:common-vars :variable
 <#TransformFiles> a :Pipeline ;
   :steps [
       :stepList ( <#readDir> <#doTransform> <#sparqlInsert> <#serialize> <#save>)
+#      :stepList ( <#readDir> <#doTransform> <#serialize> <#save>)
+
     ] ;
   :variables _:common-vars .
 
@@ -106,8 +108,8 @@ _:common-vars :variable
 <#TransformCsv> a :Pipeline, :ReadableObjectMode ;
   :steps
     [
-      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <#filterNotCsvw> )
-#     :stepList ( <#openCsv> <#parse> <#filterNotCsvw> )
+      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <#fixCantonCase> <#filterNotCsvw> )
+#     :stepList ( <#openCsv> <#parse> <#fixCantonCase> <#filterNotCsvw> )
 
 
     ] ;
@@ -175,6 +177,20 @@ _:common-vars :variable
 	}
 	return true
 	}"""^^code:EcmaScript ).
+
+<#fixCantonCase> a :Step ;
+  code:implementedBy [
+    code:link <node:barnard59-base#map> ;
+    a code:EcmaScript
+  ];
+  code:arguments ( """quad => {
+      const rdf = require('rdf-ext')
+      if (quad.predicate.value !== 'http://ld.zazuko.com/animalpest/attribute/canton') {
+        return quad
+      }
+    
+      return rdf.quad(quad.subject, quad.predicate, rdf.namedNode(quad.object.value.toLowerCase()))
+    }"""^^code:EcmaScript) .
 
 <#sparqlInsert> a :Step;
   code:implementedBy [ a code:EcmaScript;
