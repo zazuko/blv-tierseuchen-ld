@@ -1,6 +1,7 @@
 image: zazukoians/node-java-jena
 before_script:
   - npm install
+  - curl https://ipinfo.io/ip
 
 stages:
   - build
