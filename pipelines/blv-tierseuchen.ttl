@@ -39,7 +39,7 @@ _:common-vars :variable
     ] ;
   :variables
     [
-      :variable [ a :Variable; :name "sourceUrl"; :value "http://ktk.netlabs.org/misc/rdf/seuchenmeldungen.zip" ]
+      :variable [ a :Variable; :name "sourceUrl"; :value "http://ktk.netlabs.org/misc/rdf/InfoSM.zip" ]
     ],
     _:common-vars .
 
