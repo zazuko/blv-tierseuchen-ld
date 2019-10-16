@@ -17,8 +17,7 @@
       },
       {
         "titles": "isvet_fall_id",
-        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/isvet_fall_id",
-        "suppressOutput": true
+        "propertyUrl": "http://ld.zazuko.com/animalpest/attribute/isvet-case-id"
       },
       {
         "titles": "isvet_id",
