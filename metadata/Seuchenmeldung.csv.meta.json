@@ -56,7 +56,7 @@
       {
         "titles": "coordinateX",
         "propertyUrl": "http://example.org/municipality",
-        "valueUrl": "http://api.geo.admin.ch/rest/services/all/MapServer/identify?geometry={coordinateX},{coordinateY}&geometryFormat=geojson&geometryType=esriGeometryPoint&imageDisplay=1391,1070,96&lang=fr&layers=all:ch.swisstopo.swissboundaries3d-gemeinde-flaeche.fill&mapExtent=312250,-77500,1007750,457500&returnGeometry=false&tolerance=1&sr=2056"    
+        "valueUrl": "https://api.geo.admin.ch/rest/services/all/MapServer/identify?geometry={coordinateX},{coordinateY}&geometryFormat=geojson&geometryType=esriGeometryPoint&imageDisplay=1391,1070,96&lang=fr&layers=all:ch.swisstopo.swissboundaries3d-gemeinde-flaeche.fill&mapExtent=312250,-77500,1007750,457500&returnGeometry=false&tolerance=1&sr=2056"    
       },
       {
         "titles": "coordinateY",
