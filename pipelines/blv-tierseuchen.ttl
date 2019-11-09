@@ -108,8 +108,8 @@ _:common-vars :variable
 <#TransformCsv> a :Pipeline, :ReadableObjectMode ;
   :steps
     [
-      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <#fixCantonCase> <#filterNotCsvw> )
-#     :stepList ( <#openCsv> <#parse> <#fixCantonCase> <#filterNotCsvw> )
+      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <#fixCantonCase> <#tierGruppe> <#filterNotCsvw> )
+#      :stepList ( <#openCsv> <#parse> <#fixCantonCase> <#tierGruppe> <#filterNotCsvw> )
 
 
     ] ;
@@ -190,6 +190,35 @@ _:common-vars :variable
       }
     
       return rdf.quad(quad.subject, quad.predicate, rdf.namedNode(quad.object.value.toLowerCase()))
+    }"""^^code:EcmaScript) .
+
+<#tierGruppe> a :Step ;
+  code:implementedBy [
+    code:link <node:barnard59-base#map> ;
+    a code:EcmaScript
+  ];
+  code:arguments ( """quad => {
+      const urlSlug = require('url-slug')
+      const rdf = require('rdf-ext')
+	  
+	  if(quad.predicate.value == 'http://example.org/tiergruppe'){
+    	const iriArray = quad.object.value.split('§')
+		  const group = decodeURI(iriArray[1]).trim()
+      const groupSlug = urlSlug(group)
+		
+		  return rdf.quad(quad.subject, rdf.namedNode('http://www.w3.org/2004/02/skos/core#broader'), rdf.namedNode('http://ld.zazuko.com/animalpest/species/group/'+groupSlug))
+	  }
+
+	  if(quad.subject.value.includes('§')){
+   		const iriArray = quad.subject.value.split('§')
+		  const group = decodeURI(iriArray[1]).trim()
+      const groupSlug = urlSlug(group)
+		
+		return rdf.quad(rdf.namedNode(iriArray[0]+groupSlug), quad.predicate, quad.object);
+	  }
+
+
+      return quad
     }"""^^code:EcmaScript) .
 
 <#sparqlInsert> a :Step;
