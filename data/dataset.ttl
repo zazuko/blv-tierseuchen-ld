@@ -1,0 +1,130 @@
+@base <http://ld.zazuko.com/animalpest/> .
+@prefix animalpest-attribute: <http://ld.zazuko.com/animalpest/attribute/> .
+@prefix animalpest-dimension: <http://ld.zazuko.com/animalpest/dimension/> .
+@prefix animalpest-measure: <http://ld.zazuko.com/animalpest/measure/> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix sdmx-dimension:  <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix scale: <http://ns.bergnet.org/cube/scale/> .
+@prefix schema: <http://schema.org/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+
+<dataset> a qb:DataSet ;
+  rdfs:label "Tierseuchen"@de ;
+  rdfs:label "Animalpest"@en ;
+  rdfs:label "Épizooties"@fr ;
+  rdfs:label "Epizoozie"@it . 
+
+# Measures
+
+animalpest-measure:animals-stock a qb:MeasureProperty;
+	rdfs:label "Animals stock"@en;
+  rdfs:label "Tiere Bestand"@de;
+  scale:scaleOfMeasure scale:Continuous;
+  rdfs:range xsd:double .
+
+animalpest-measure:animals-sick a qb:MeasureProperty;
+	rdfs:label "Animals sick"@en;
+  rdfs:label "Tiere krank"@de;
+  scale:scaleOfMeasure scale:Continuous;
+  rdfs:range xsd:double .
+
+animalpest-measure:animals-infected a qb:MeasureProperty;
+	rdfs:label "Animals infected"@en;
+  rdfs:label "Tiere infiziert"@de;
+  scale:scaleOfMeasure scale:Continuous;
+  rdfs:range xsd:double .
+
+animalpest-measure:animals-infected a qb:MeasureProperty;
+	rdfs:label "Animals deceased"@en;
+  rdfs:label "Tiere gestorben"@de;
+  scale:scaleOfMeasure scale:Continuous;
+  rdfs:range xsd:double .
+
+animalpest-measure:animals-killed a qb:MeasureProperty;
+	rdfs:label "Animals killed"@en;
+  rdfs:label "Tiere getötet"@de;
+  scale:scaleOfMeasure scale:Continuous;
+  rdfs:range xsd:double .
+
+# Dimensions
+
+animalpest-dimension:species a qb:DimensionProperty;
+  rdfs:label "Species"@en;
+  rdfs:label "Tierart"@de;
+  scale:scaleOfMeasure scale:Nominal;
+  rdfs:range skos:Concept .
+
+animalpest-dimension:animaldisease a qb:DimensionProperty;
+  rdfs:label "Animal disease"@en;
+  rdfs:label "Tierseuche"@de;
+  scale:scaleOfMeasure scale:Nominal;
+  rdfs:range skos:Concept .
+
+animalpest-dimension:phenotype a qb:DimensionProperty;
+  rdfs:label "Phenotype"@en;
+  rdfs:label "Seuchenspezifikation"@de;
+  scale:scaleOfMeasure scale:Nominal;
+  rdfs:range skos:Concept .
+
+animalpest-dimension:reason a qb:DimensionProperty;
+  rdfs:label "Reason"@en;
+  rdfs:label "Grund"@de;
+  scale:scaleOfMeasure scale:Nominal;
+  rdfs:range skos:Concept .
+
+# Attributes
+
+animalpest-attribute:diagnose-date a qb:AttributeProperty;
+	rdfs:label "Diagnose date"@en;
+  rdfs:label "Diagnose Datum"@de;
+  scale:scaleOfMeasure scale:Temporal;
+  rdfs:range xsd:date .
+
+animalpest-attribute:release-internet a qb:AttributeProperty;
+	rdfs:label "Release Internet"@en;
+  rdfs:label "Freigabe Internet"@de;
+  scale:scaleOfMeasure scale:Temporal;
+  rdfs:range xsd:date .
+
+animalpest-attribute:id a qb:AttributeProperty;
+	rdfs:label "ID"@en;
+  rdfs:label "ID"@de.
+
+animalpest-attribute:id a qb:AttributeProperty;
+	rdfs:label "isvet case-id"@en;
+  rdfs:label "isvet Fall-id"@de.
+
+animalpest-attribute:year a qb:AttributeProperty;
+	rdfs:label "Year"@en;
+  rdfs:label "Jahr"@de.
+
+animalpest-attribute:month a qb:AttributeProperty;
+	rdfs:label "Month"@en;
+  rdfs:label "Monat"@de.
+
+animalpest-attribute:week a qb:AttributeProperty;
+	rdfs:label "Week"@en;
+  rdfs:label "Woche"@de.
+
+animalpest-attribute:postalCode a qb:AttributeProperty;
+	rdfs:label "Postal code"@en;
+  rdfs:label "Postleitzahl"@de.
+
+animalpest-attribute:canton a qb:AttributeProperty;
+  scale:scaleOfMeasure scale:Nominal;
+	rdfs:label "Canton"@en;
+  rdfs:label "Kanton"@de.
+
+animalpest-attribute:municipality a qb:AttributeProperty;
+  scale:scaleOfMeasure scale:Nominal;
+	rdfs:label "Municipality"@en;
+  rdfs:label "Gemeinde"@de.
+
+animalpest-attribute:remark a qb:AttributeProperty;
+	rdfs:label "Remark"@en;
+  rdfs:label "Bemerkung"@de.
