@@ -5,7 +5,7 @@
     "delimiter": "~"
   },
   "tableSchema": {
-    "aboutUrl": "http://ld.zazuko.com/animalpest/species/group/{oie_species}",
+    "aboutUrl": "http://ld.zazuko.com/animalpest/species/group/§{name_tg_en}",
     "columns": [
       {
         "titles": "id",

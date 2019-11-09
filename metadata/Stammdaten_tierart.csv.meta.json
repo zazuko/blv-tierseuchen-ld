@@ -34,7 +34,8 @@
       {
         "titles": "oie_species",
         "propertyUrl": "http://www.w3.org/2004/02/skos/core#broader",
-        "valueUrl": "http://ld.zazuko.com/animalpest/species/group/{oie_species}"
+        "valueUrl": "http://ld.zazuko.com/animalpest/species/group/{oie_species}",
+        "suppressOutput": true
       },
       {
         "titles": "name_tg_de",
@@ -56,9 +57,8 @@
       },
       {
         "titles": "name_tg_en",
-        "propertyUrl": "http://www.w3.org/2000/01/rdf-schema#label",
-        "lang": "en",
-        "suppressOutput": true
+        "propertyUrl": "http://example.org/tiergruppe",
+        "valueUrl": "http://ld.zazuko.com/animalpest/species/group/§{name_tg_en}"
       },
       {
         "virtual": true,
