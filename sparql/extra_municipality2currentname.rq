@@ -12,7 +12,7 @@ INSERT {
         dcterms:identifier ?municipalityId .
 
 } WHERE {
-    SERVICE <http://data.admin.ch/query> {
+    SERVICE <http://classifications.data.admin.ch/query> {
         SELECT * WHERE { GRAPH <https://linked.opendata.swiss/graph/eCH-0071> {
 
             {   SELECT DISTINCT ?municipality (max(?eventDate) AS ?mostRecentDate)
