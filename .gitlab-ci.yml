@@ -7,7 +7,6 @@ before_script:
   - chmod 700 ~/.ssh
 # end SSH
   - npm install
-#  - curl https://ipinfo.io/ip
 
 stages:
   - build
@@ -16,19 +15,4 @@ pipeline_build:
   stage: build
   script:
     - npm run animalpest-pipeline-test
-  #artifacts:
-  #  paths:
-  #    - target/everything.nt
-  #  expire_in: 1 day
-  # except:
-  #   variables:
-  #       - $CRON
-
-# tierseuchen_staging:
-#   stage: staging
-#   script:
-#     - npm run clean-nt
-#   only:
-#     variables:
-#         - $CRON
 
