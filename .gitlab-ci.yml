@@ -1,5 +1,6 @@
 image: zazukoians/node-java-jena
 before_script:
+  - mkdir -p target
 # SSH Key Setup, see https://docs.gitlab.com/ee/ci/ssh_keys/
   - eval $(ssh-agent -s)
   - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
@@ -15,11 +16,11 @@ stages:
 pipeline_build:
   stage: build
   script:
-    - npm run start
-  artifacts:
-    paths:
-      - target/everything.nt
-    expire_in: 1 day
+    - npm run animalpest-pipeline-test
+  #artifacts:
+  #  paths:
+  #    - target/everything.nt
+  #  expire_in: 1 day
   # except:
   #   variables:
   #       - $CRON

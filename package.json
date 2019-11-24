@@ -8,7 +8,11 @@
     "start": "mkdir -p target source; barnard59 run --pipeline urn:pipeline:tierseuchen-ld#Root --format text/turtle pipelines/blv-tierseuchen.ttl",
     "startFile": "mkdir -p target source; barnard59 run --pipeline urn:pipeline:tierseuchen-ld#RootFile --format text/turtle pipelines/blv-tierseuchen.ttl",
     "clean-nt": "rm -f target/everything.nt && cat target/*.nt | sed '/_:/d' | sed '/<file/d' | sed '/#(No/d' | sed '/NULL/d'  > target/everything.nt",
-    "pipeline": "npm start -- --pipeline"
+    "pipeline": "npm start -- --pipeline",
+    "animalpest-pipeline-file": "barnard59 run -v --format text/turtle --pipeline=urn:pipeline:tierseuchen-ld#RootFile pipelines/blv-tierseuchen.ttl",
+    "animalpest-pipeline-test": "barnard59 run -v --variable=\"endpoint=https://stardog-test.cluster.ldbar.ch/lindas\" --variable=\"user=$STARDOG_USERNAME\" --variable=\"password=$STARDOG_PASSWORD_TEST\" --format text/turtle --pipeline=urn:pipeline:tierseuchen-ld#Root pipelines/blv-tierseuchen.ttl",
+    "animalpest-pipeline-int": "barnard59 run -v --variable=\"endpoint=https://stardog-int.cluster.ldbar.ch/lindas\" --variable=\"user=$STARDOG_USERNAME\" --variable=\"password=$STARDOG_PASSWORD_INT\" --format text/turtle --pipeline=urn:pipeline:tierseuchen-ld#Root pipelines/blv-tierseuchen.ttl",
+    "animalpest-pipeline-prod": "barnard59 run -v --variable=\"endpoint=https://stardog.cluster.ldbar.ch/lindas\" --variable=\"user=$STARDOG_USERNAME\" --variable=\"password=$STARDOG_PASSWORD_PROD\" --format text/turtle --pipeline=urn:pipeline:tierseuchen-ld#Root pipelines/blv-tierseuchen.ttl"
   },
   "repository": {
     "type": "git",
