@@ -6,6 +6,7 @@
   "scripts": {
     "test": "standard && jest",
     "start": "mkdir -p target source; barnard59 run --pipeline urn:pipeline:tierseuchen-ld#Root --format text/turtle pipelines/blv-tierseuchen.ttl",
+    "startFile": "mkdir -p target source; barnard59 run --pipeline urn:pipeline:tierseuchen-ld#RootFile --format text/turtle pipelines/blv-tierseuchen.ttl",
     "clean-nt": "rm -f target/everything.nt && cat target/*.nt | sed '/_:/d' | sed '/<file/d' | sed '/#(No/d' | sed '/NULL/d'  > target/everything.nt",
     "pipeline": "npm start -- --pipeline"
   },
@@ -22,6 +23,7 @@
   "dependencies": {
     "barnard59": "0.0.5",
     "barnard59-formats": "0.0.6",
+    "barnard59-graph-store": "0.0.4",
     "barnard59-tdb": "git+https://github.com/zazuko/barnard59-tdb.git",
     "node-fetch": "^2.6.0",
     "rdf-ext": "^1.3.0",

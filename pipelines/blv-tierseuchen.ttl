@@ -6,7 +6,8 @@
 _:common-vars :variable
   [ a :Variable; :name "targetDir"; :value "target" ] ,
   [ a :Variable; :name "mappingsDir"; :value "metadata" ],
-  [ a :Variable; :name "sourceDir"; :value "source" ] .
+  [ a :Variable; :name "sourceDir"; :value "source" ],
+  [ a :Variable; :name "graph"; :value "https://linked.opendata.swiss/graph/blv/animalpest" ] .
 
 # ------------------------------
 #
@@ -16,12 +17,20 @@ _:common-vars :variable
 #
 # ------------------------------
 
-<#Root> a :Pipeline, :Readable;
+<#RootFile> a :Pipeline, :Readable;
   :steps [
     :stepList (
       [ a :Step ;
         code:implementedBy [ a code:EcmaScript; code:link <file:../lib/sequence> ];
         code:arguments ( <#Download-Sources> <#TransformFiles>  ) ]
+    ) ] .
+
+<#Root> a :Pipeline, :Readable;
+  :steps [
+    :stepList (
+      [ a :Step ;
+        code:implementedBy [ a code:EcmaScript; code:link <file:../lib/sequence> ];
+        code:arguments ( <#Download-Sources> <#TransformFilesGraphStore>  ) ]
     ) ] .
 
 # ------------------------------
@@ -71,10 +80,18 @@ _:common-vars :variable
 #
 # ------------------------------
 
+<#TransformFilesGraphStore> a :Pipeline ;
+  :steps [
+      :stepList ( <#readDir> <#doTransform> <#sparqlInsert> <#setGraph> <#upload>)
+#      :stepList ( <#readDir> <#doTransform> <#serialize> <#save>)
+
+    ] ;
+  :variables _:common-vars .
+
 <#TransformFiles> a :Pipeline ;
   :steps [
-      :stepList ( <#readDir> <#doTransform> <#sparqlInsert> <#serialize> <#save>)
-#      :stepList ( <#readDir> <#doTransform> <#serialize> <#save>)
+#      :stepList ( <#readDir> <#doTransform> <#sparqlInsert> <#serialize> <#save>)
+      :stepList ( <#readDir> <#doTransform> <#serialize> <#save>)
 
     ] ;
   :variables _:common-vars .
@@ -108,8 +125,8 @@ _:common-vars :variable
 <#TransformCsv> a :Pipeline, :ReadableObjectMode ;
   :steps
     [
-      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <#fixCantonCase> <#tierGruppe> <#filterNotCsvw> )
-#      :stepList ( <#openCsv> <#parse> <#fixCantonCase> <#tierGruppe> <#filterNotCsvw> )
+#      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <#fixCantonCase> <#tierGruppe> <#filterNotCsvw> )
+      :stepList ( <#openCsv> <#parse> <#fixCantonCase> <#tierGruppe> <#filterNotCsvw> )
 
 
     ] ;
@@ -247,3 +264,24 @@ _:common-vars :variable
       a code:EcmaScript
     ];
   code:arguments ("${targetDir}/everything.nt"^^code:EcmaScriptTemplateLiteral).
+
+<#setGraph> a :Step;
+  code:implementedBy [ a code:EcmaScript;
+    code:link <node:barnard59-base#setGraph>
+  ];
+  code:arguments ( "graph"^^:VariableName ).
+
+<#upload> a :Step;
+  code:implementedBy [ a code:EcmaScript;
+    code:link <node:barnard59-graph-store#put>
+  ];
+  code:arguments [
+    code:name "endpoint";
+    code:value "endpoint"^^:VariableName
+  ], [
+    code:name "user";
+    code:value "user"^^:VariableName
+  ], [
+    code:name "password";
+    code:value "password"^^:VariableName
+  ].
