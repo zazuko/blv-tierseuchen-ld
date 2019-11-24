@@ -3,7 +3,7 @@ before_script:
 # SSH Key Setup, see https://docs.gitlab.com/ee/ci/ssh_keys/
   - eval $(ssh-agent -s)
   - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
-  - echo "sftp.zazukoians.org ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICQreGG5LpFFP/aOow7i3IGIYF4xq+6dYocwZTgawmIa" >> ~/.ssh/known_hosts
+  - echo "sftp.zazukoians.org ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICQreGG5LpFFP/aOow7i3IGIYF4xq+6dYocwZTgawmIa" > ~/.ssh/known_hosts
   - mkdir -p ~/.ssh
   - chmod 700 ~/.ssh
 # end SSH
