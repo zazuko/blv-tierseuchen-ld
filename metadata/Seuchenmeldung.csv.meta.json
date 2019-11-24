@@ -78,6 +78,10 @@
         "valueUrl": "http://ld.zazuko.com/animalpest/species/{tierart_id}"
       },
       {
+        "titles": "Tiergruppe",
+        "suppressOutput": true
+      },
+      {
         "titles": "tierart_angabe",
         "propertyUrl": "http://ld.zazuko.com/animalpest/dimension/tierart-angabe",
         "valueUrl": "http://ld.zazuko.com/animalpest/tier-art/{tierart_angabe}",
