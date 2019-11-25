@@ -6,7 +6,7 @@ before_script:
   - mkdir -m 700 -p ~/.ssh
   - echo "sftp.zazukoians.org ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICQreGG5LpFFP/aOow7i3IGIYF4xq+6dYocwZTgawmIa" > ~/.ssh/known_hosts
 # end SSH
-  - sftp isceco-pr@sftp.zazukoians.org:upload/InfoSM.zip .
+#  - sftp isceco-pr@sftp.zazukoians.org:upload/InfoSM.zip .
   - npm install
 
 stages:
@@ -15,5 +15,6 @@ stages:
 pipeline_build:
   stage: build
   script:
-    - npm run animalpest-pipeline-test
+#    - npm run animalpest-pipeline-test
+    - ./scripts/put.sh
 
