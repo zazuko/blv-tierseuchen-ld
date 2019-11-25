@@ -23,6 +23,7 @@
   "dependencies": {
     "barnard59": "0.0.5",
     "barnard59-formats": "0.0.6",
+    "barnard59-ftp": "git+https://github.com/zazuko/barnard59-ftp.git#sftp-privatekey",
     "barnard59-graph-store": "0.0.4",
     "barnard59-tdb": "git+https://github.com/zazuko/barnard59-tdb.git",
     "node-fetch": "^2.6.0",

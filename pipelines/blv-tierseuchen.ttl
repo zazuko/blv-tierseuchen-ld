@@ -22,7 +22,9 @@ _:common-vars :variable
     :stepList (
       [ a :Step ;
         code:implementedBy [ a code:EcmaScript; code:link <file:../lib/sequence> ];
-        code:arguments ( <#Download-Sources> <#TransformFiles>  ) ]
+#        code:arguments ( <#Download-Sources> <#TransformFiles>  ) ]
+        code:arguments ( <#Download-Sources>  ) ]
+
     ) ] .
 
 <#Root> a :Pipeline, :Readable;
@@ -44,7 +46,9 @@ _:common-vars :variable
 <#Download-Sources> a :Pipeline, :Readable ;
   :steps
     [
-      :stepList ( <#download> <#extract> )
+      #:stepList ( <#downloadSftp> <#extract> )
+      :stepList ( <#downloadSftp> )
+
     ] ;
   :variables
     [
@@ -61,6 +65,29 @@ _:common-vars :variable
   code:arguments (
     "${sourceUrl}"^^code:EcmaScriptTemplateLiteral
   ).
+
+<#downloadSftp> a :Step ;
+  code:implementedBy
+    [
+      code:link <node:barnard59-ftp#read> ;
+      a code:EcmaScript
+    ] ;
+  code:arguments [
+    code:name "protocol";
+    code:value "sftp"
+  ], [
+    code:name "user";
+    code:value "isceco-pr"
+  ], [
+    code:name "host";
+    code:value "sftp.zazukoians.org"
+  ], [
+    code:name "filename";
+    code:value "upload/InfoSM.zip"
+  ], [
+    code:name "privateKey";
+    code:value "/Users/ktk/.ssh/blv-sftp-isceco-pr"
+  ].
 
 <#extract> a :Step ;
   code:implementedBy
