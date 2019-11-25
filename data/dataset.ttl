@@ -17,7 +17,11 @@
   rdfs:label "Tierseuchen"@de ;
   rdfs:label "Animalpest"@en ;
   rdfs:label "Épizooties"@fr ;
-  rdfs:label "Epizoozie"@it . 
+  rdfs:label "Epizoozie"@it ;
+  rdfs:comment "Wer Tiere hält, betreut oder behandelt, ist verpflichtet, den Verdacht auf und den Ausbruch von Seuchen einem Tierarzt zu melden. Das BLV unterhält ein Informationssystem „Seuchenmeldungen“ und publiziert jeweils die aktuellen Tierseuchen."@de ;
+  rdfs:comment "Quiconque détient, prend soin ou traite des animaux est tenu d'annoncer à un vétérinaire toute suspicion ou toute apparition d'épizootie. L'OSAV exploite le système d'information „Annonces d'épizooties“ et fait connaître les cas d'épizooties actuels."@fr ;
+  rdfs:comment "Chi detiene, accudisce o cura animali ha l’obbligo di notificare a un veterinario la comparsa o il sospetto di un’epizoozia. L’USAV gestisce un sistema d’informazione di notifica delle epizoozie e pubblica le attuali epizoozie."@it ;
+  rdfs:comment "Whoever keeps, looks after or treats animals is obliged to report the suspicion and outbreak of epidemics to a veterinarian. The BLV maintains an information system „Disease reports“ and publishes the current animal diseases."@en .
 
 # Measures
 
