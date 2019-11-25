@@ -2,8 +2,7 @@ PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-#INSERT { GRAPH <https://linked.opendata.swiss/graph/blv/animalpest> {
-  CONSTRUCT {
+INSERT { GRAPH <https://linked.opendata.swiss/graph/blv/animalpest> {
   	?dataSet a qb:DataSet ;
       rdfs:label ?year ; 
       qb:structure ?dsd .
@@ -13,7 +12,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     ?component qb:dimension ?dimensionUri ;
         qb:measure ?measureUri ;
         qb:attribute ?attributeUri .
-}
+}}
 WHERE { GRAPH <https://linked.opendata.swiss/graph/blv/animalpest> {
     
     # Get distinct qb:ComponentProperty (the specific ones)
