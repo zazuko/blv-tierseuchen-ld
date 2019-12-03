@@ -22,9 +22,7 @@ _:common-vars :variable
     :stepList (
       [ a :Step ;
         code:implementedBy [ a code:EcmaScript; code:link <file:../lib/sequence> ];
-#        code:arguments ( <#Download-Sources> <#TransformFiles>  ) ]
-        code:arguments ( <#Download-Sources>  ) ]
-
+        code:arguments ( <#Download-Sources> <#TransformFiles>  ) ]
     ) ] .
 
 <#Root> a :Pipeline, :Readable;
@@ -46,9 +44,7 @@ _:common-vars :variable
 <#Download-Sources> a :Pipeline, :Readable ;
   :steps
     [
-      #:stepList ( <#downloadSftp> <#extract> )
-      :stepList ( <#downloadSftp> )
-
+      :stepList ( <#downloadSftp> <#extract> )
     ] ;
   :variables
     [
@@ -83,10 +79,16 @@ _:common-vars :variable
     code:value "sftp.zazukoians.org"
   ], [
     code:name "filename";
-    code:value "upload/InfoSM.zip"
+    code:value "/upload/InfoSM.zip"
   ], [
     code:name "privateKey";
-    code:value "/Users/ktk/.ssh/blv-sftp-isceco-pr"
+#    code:value "privateKey"^^:VariableName
+#    code:value "${process.env.SSH_PRIVATE_KEY}"^^:templateLiteralDatatype
+    code:value """-----BEGIN OPENSSH PRIVATE KEY-----
+FIXME
+-----END OPENSSH PRIVATE KEY-----
+"""
+
   ].
 
 <#extract> a :Step ;
