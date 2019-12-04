@@ -82,13 +82,7 @@ _:common-vars :variable
     code:value "/upload/InfoSM.zip"
   ], [
     code:name "privateKey";
-#    code:value "privateKey"^^:VariableName
-#    code:value "${process.env.SSH_PRIVATE_KEY}"^^:templateLiteralDatatype
-    code:value """-----BEGIN OPENSSH PRIVATE KEY-----
-FIXME
------END OPENSSH PRIVATE KEY-----
-"""
-
+    code:value "${process.env.SSH_PRIVATE_KEY}"^^code:EcmaScriptTemplateLiteral
   ].
 
 <#extract> a :Step ;
@@ -117,8 +111,8 @@ FIXME
 
 <#TransformFiles> a :Pipeline ;
   :steps [
-      :stepList ( <#readDir> <#doTransform> <#sparqlInsert> <#serialize> <#save>)
-#      :stepList ( <#readDir> <#doTransform> <#serialize> <#save>)
+#      :stepList ( <#readDir> <#doTransform> <#sparqlInsert> <#serialize> <#save>)
+      :stepList ( <#readDir> <#doTransform> <#serialize> <#save>)
 
     ] ;
   :variables _:common-vars .
@@ -152,8 +146,8 @@ FIXME
 <#TransformCsv> a :Pipeline, :ReadableObjectMode ;
   :steps
     [
-      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <#fixCantonCase> <#tierGruppe> <#filterNotCsvw> )
-#      :stepList ( <#openCsv> <#parse> <#fixCantonCase> <#tierGruppe> <#filterNotCsvw> )
+#      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <#fixCantonCase> <#tierGruppe> <#filterNotCsvw> )
+      :stepList ( <#openCsv> <#parse> <#fixCantonCase> <#tierGruppe> <#filterNotCsvw> )
 
 
     ] ;

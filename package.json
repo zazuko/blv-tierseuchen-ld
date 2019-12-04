@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "mkdir -p source && mkdir -p target ",
-    "animalpest-pipeline-file": "barnard59 run -v --variable=\"privateKey=$SSH_PRIVATE_KEY\" --format text/turtle --pipeline=urn:pipeline:tierseuchen-ld#RootFile pipelines/blv-tierseuchen.ttl",
+    "animalpest-pipeline-file": "barnard59 run -v --format text/turtle --pipeline=urn:pipeline:tierseuchen-ld#RootFile pipelines/blv-tierseuchen.ttl",
     "animalpest-pipeline-test": "barnard59 run -v --variable=\"endpoint=https://stardog-test.cluster.ldbar.ch/lindas\" --variable=\"user=$STARDOG_USERNAME\" --variable=\"password=$STARDOG_PASSWORD_TEST\" --format text/turtle --pipeline=urn:pipeline:tierseuchen-ld#Root pipelines/blv-tierseuchen.ttl",
     "animalpest-pipeline-int": "barnard59 run -v --variable=\"endpoint=https://stardog-int.cluster.ldbar.ch/lindas\" --variable=\"user=$STARDOG_USERNAME\" --variable=\"password=$STARDOG_PASSWORD_INT\" --format text/turtle --pipeline=urn:pipeline:tierseuchen-ld#Root pipelines/blv-tierseuchen.ttl",
     "animalpest-pipeline-prod": "barnard59 run -v --variable=\"endpoint=https://stardog.cluster.ldbar.ch/lindas\" --variable=\"user=$STARDOG_USERNAME\" --variable=\"password=$STARDOG_PASSWORD_PROD\" --format text/turtle --pipeline=urn:pipeline:tierseuchen-ld#Root pipelines/blv-tierseuchen.ttl"
