@@ -111,8 +111,8 @@ _:common-vars :variable
 
 <#TransformFiles> a :Pipeline ;
   :steps [
-#      :stepList ( <#readDir> <#doTransform> <#sparqlInsert> <#serialize> <#save>)
-      :stepList ( <#readDir> <#doTransform> <#serialize> <#save>)
+      :stepList ( <#readDir> <#doTransform> <#sparqlInsert> <#serialize> <#save>)
+#      :stepList ( <#readDir> <#doTransform> <#serialize> <#save>)
 
     ] ;
   :variables _:common-vars .
@@ -146,8 +146,8 @@ _:common-vars :variable
 <#TransformCsv> a :Pipeline, :ReadableObjectMode ;
   :steps
     [
-#      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <#fixCantonCase> <#tierGruppe> <#filterNotCsvw> )
-      :stepList ( <#openCsv> <#parse> <#fixCantonCase> <#tierGruppe> <#filterNotCsvw> )
+      :stepList ( <#openCsv> <#parse> <#municipalityLookup> <#fixCantonCase> <#tierGruppe> <#filterNotCsvw> )
+#      :stepList ( <#openCsv> <#parse> <#fixCantonCase> <#tierGruppe> <#filterNotCsvw> )
 
 
     ] ;
