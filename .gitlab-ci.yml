@@ -1,13 +1,12 @@
-image: zazukoians/node-java-jena
+image: zazukoians/node-java-jena:3.13.1
 before_script:
 # SSH Key Setup, see https://docs.gitlab.com/ee/ci/ssh_keys/
-  - eval $(ssh-agent -s)
-  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
-  - mkdir -m 700 -p ~/.ssh
-  - echo "sftp.zazukoians.org ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICQreGG5LpFFP/aOow7i3IGIYF4xq+6dYocwZTgawmIa" > ~/.ssh/known_hosts
-  - ls ~/.ssh
+  # - eval $(ssh-agent -s)
+  # - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+  # - mkdir -m 700 -p ~/.ssh
+  # - echo "sftp.zazukoians.org ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICQreGG5LpFFP/aOow7i3IGIYF4xq+6dYocwZTgawmIa" > ~/.ssh/known_hosts
+  # - ls ~/.ssh
 # end SSH
-#  - sftp isceco-pr@sftp.zazukoians.org:upload/InfoSM.zip .
   - npm install
 
 stages:
