@@ -13,6 +13,8 @@ stages:
   - build
 
 pipeline_build:
+  tags:
+    - medium
   stage: build
   script:
     - npm run animalpest-pipeline-test
