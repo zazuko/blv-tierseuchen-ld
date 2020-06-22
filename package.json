@@ -5,10 +5,8 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "mkdir -p source && mkdir -p target ",
-    "animalpest-pipeline-file": "JVM_ARGS=-Xmx3G barnard59 run -v --format text/turtle --pipeline=urn:pipeline:tierseuchen-ld#RootFile pipelines/blv-tierseuchen.ttl",
-    "animalpest-pipeline-test": "JVM_ARGS=-Xmx3G barnard59 run -v --variable=\"endpoint=https://stardog-test.cluster.ldbar.ch/lindas\" --variable=\"user=$STARDOG_USERNAME\" --variable=\"password=$STARDOG_PASSWORD_TEST\" --format text/turtle --pipeline=urn:pipeline:tierseuchen-ld#Root pipelines/blv-tierseuchen.ttl",
-    "animalpest-pipeline-int": "JVM_ARGS=-Xmx3G barnard59 run -v --variable=\"endpoint=https://stardog-int.cluster.ldbar.ch/lindas\" --variable=\"user=$STARDOG_USERNAME\" --variable=\"password=$STARDOG_PASSWORD_INT\" --format text/turtle --pipeline=urn:pipeline:tierseuchen-ld#Root pipelines/blv-tierseuchen.ttl",
-    "animalpest-pipeline-prod": "JVM_ARGS=-Xmx3G barnard59 run -v --variable=\"endpoint=https://stardog.cluster.ldbar.ch/lindas\" --variable=\"user=$STARDOG_USERNAME\" --variable=\"password=$STARDOG_PASSWORD_PROD\" --format text/turtle --pipeline=urn:pipeline:tierseuchen-ld#Root pipelines/blv-tierseuchen.ttl"
+    "animalpest-pipeline-file": "JVM_ARGS=-Xmx3G dotenv ./run.sh RootFile",
+    "animalpest-pipeline": "JVM_ARGS=-Xmx3G dotenv ./run.sh Root"
   },
   "repository": {
     "type": "git",
@@ -26,7 +24,10 @@
     "barnard59-ftp": "git+https://github.com/zazuko/barnard59-ftp.git#master",
     "barnard59-graph-store": "0.0.4",
     "barnard59-tdb": "git+https://github.com/zazuko/barnard59-tdb.git",
+    "dotenv": "^8.2.0",
+    "dotenv-cli": "^3.1.0",
     "node-fetch": "^2.6.0",
+    "parallel-transform": "^1.2.0",
     "rdf-ext": "^1.3.0",
     "unzipper": "^0.9.11",
     "url-slug": "^2.2.0"
