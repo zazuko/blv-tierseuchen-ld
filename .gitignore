@@ -5,3 +5,4 @@ source/
 out/
 *.csv
 .DS_Store
+.env

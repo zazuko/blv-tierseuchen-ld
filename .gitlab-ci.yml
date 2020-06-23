@@ -1,6 +1,7 @@
 image: zazukoians/node-java-jena:3.13.1
 before_script:
   - npm install
+  - mkdir -p target
 
 stages:
   - build
@@ -9,7 +10,9 @@ pipeline_build:
   tags:
     - medium
   stage: build
+  environment:
+    name: TEST
   script:
-    - npm run animalpest-pipeline-test
+    - npm run animalpest-pipeline
     - ./scripts/put.sh
 
