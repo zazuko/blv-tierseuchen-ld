@@ -13,6 +13,6 @@ pipeline_build:
   environment:
     name: TEST
   script:
-    - npm run animalpest-pipeline-file
+    - npm run animalpest-pipeline
     - ./scripts/put.sh
 
