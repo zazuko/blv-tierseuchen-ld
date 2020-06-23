@@ -9,7 +9,9 @@ pipeline_build:
   tags:
     - medium
   stage: build
+  environment:
+    name: TEST
   script:
-    - npm run animalpest-pipeline-test
+    - npm run animalpest-pipeline
     - ./scripts/put.sh
 
