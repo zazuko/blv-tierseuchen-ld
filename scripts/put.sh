@@ -1,6 +1,6 @@
 #!/bin/sh
 ## This is a workaround to put the cube metadata and generate the missing triples for the Cube JS API
-curl -u ${FSVO_USERNAME}:${FSVO_PASSWORD_TEST} -X POST  --data timeout=1000000  --data-urlencode update="CLEAR GRAPH <https://linked.opendata.swiss/graph/blv/animalpest> " https://stardog-test.cluster.ldbar.ch/lindas/update
+#curl -u ${FSVO_USERNAME}:${FSVO_PASSWORD_TEST} -X POST  --data timeout=1000000  --data-urlencode update="CLEAR GRAPH <https://linked.opendata.swiss/graph/blv/animalpest> " https://stardog-test.cluster.ldbar.ch/lindas/update
 curl -u ${FSVO_USERNAME}:${FSVO_PASSWORD_TEST} \
      --http1.1 \
      -X POST \
