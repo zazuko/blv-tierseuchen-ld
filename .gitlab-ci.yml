@@ -7,6 +7,8 @@ stages:
   - build
 
 pipeline_build_prod:
+  only:
+    - master
   tags:
     - medium
   stage: build
@@ -17,6 +19,8 @@ pipeline_build_prod:
     - ./scripts/put.sh
 
 pipeline_build_int:
+  only:
+    - develop
   tags:
     - medium
   stage: build
