@@ -6,7 +6,7 @@ before_script:
 stages:
   - build
 
-pipeline_build:
+pipeline_build_prod:
   tags:
     - medium
   stage: build
@@ -16,3 +16,11 @@ pipeline_build:
     - npm run animalpest-pipeline
     - ./scripts/put.sh
 
+pipeline_build_int:
+  tags:
+    - medium
+  stage: build
+  environment:
+    name: INT
+  script:
+    - npm run animalpest-pipeline
