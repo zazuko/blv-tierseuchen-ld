@@ -83,6 +83,7 @@ _:common-vars :variable
   ], [
     code:name "privateKey";
     code:value "${process.env.SSH_PRIVATE_KEY}"^^code:EcmaScriptTemplateLiteral
+    #code:value "privateKey"^^:VariableName
   ].
 
 <#extract> a :Step ;
