@@ -7,7 +7,7 @@ _:common-vars :variable
   [ a :Variable; :name "targetDir"; :value "target" ] ,
   [ a :Variable; :name "mappingsDir"; :value "metadata" ],
   [ a :Variable; :name "sourceDir"; :value "source" ],
-  [ a :Variable; :name "graph"; :value "https://linked.opendata.swiss/graph/blv/animalpest" ] .
+  [ a :Variable; :name "graph"; :value "https://linked.opendata.swiss/fsvo/animalpest" ] .
 
 # ------------------------------
 #
