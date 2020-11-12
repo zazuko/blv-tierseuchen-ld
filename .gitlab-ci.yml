@@ -13,10 +13,9 @@ pipeline_build_prod:
     - medium
   stage: build
   environment:
-    name: TEST
+    name: PROD
   script:
     - npm run animalpest-pipeline
-    - ./scripts/put.sh
 
 pipeline_build_int:
   only:
