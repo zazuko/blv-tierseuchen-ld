@@ -8,7 +8,7 @@ stages:
 
 pipeline_build_prod:
   only:
-    - master
+    - future
   tags:
     - medium
   stage: build
