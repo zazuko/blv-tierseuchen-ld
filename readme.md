@@ -1,3 +1,6 @@
+**NOTE**: No longer active, use https://gitlab.ldbar.ch/pipelines/fsvo-animalpest instead.
+
+
 # BLV Tierseuchen RDF Pipeline
 
 Tagesaktuelle Daten vom [Bundesamt für Lebensmittelsicherheit und Veterinärwesen](https://www.blv.admin.ch/) zu Tierseuchen werden durch diese Pipeline nach RDF überführt.
